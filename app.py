@@ -28,6 +28,7 @@ from analytics.pulse import compute_city_pulse_pipeline
 from summary.summary_generator import generate_citypulse_summary
 
 from ui.styles import get_custom_css
+from ui.google_map import render_citypulse_map, get_google_maps_api_key
 from ui.components import (
     render_header,
     render_demo_notice,
@@ -99,12 +100,10 @@ def load_and_process_civic_data(weather_file: str, traffic_file: str, complaints
 # ---------------------------------------------------------
 # Sidebar Controls & Live Simulation Toggles
 # ---------------------------------------------------------
-st.sidebar.markdown("""
-<div style="display:flex; align-items:center; gap:10px; margin-bottom:12px;">
-    <span style="font-size:26px;">🏙️</span>
-    <span style="font-size:20px; font-weight:800; color:#F8FAFC;">CityPulse V2</span>
-</div>
-""", unsafe_allow_html=True)
+st.sidebar.markdown("""<div style="display:flex; align-items:center; gap:10px; margin-bottom:12px;">
+<span style="font-size:26px;">🏙️</span>
+<span style="font-size:20px; font-weight:800; color:#F8FAFC;">CityPulse V2</span>
+</div>""", unsafe_allow_html=True)
 st.sidebar.caption(f"Municipal Control Room &bull; **{CITY_NAME}, Rajasthan**")
 
 st.sidebar.markdown("---")
@@ -116,9 +115,30 @@ selected_zone_filter = st.sidebar.selectbox(
 )
 
 st.sidebar.markdown("---")
-st.sidebar.subheader("🗺️ Map Cartography")
+st.sidebar.subheader("🗺️ Map Engine & Cartography")
+
+has_gmaps_key = bool(get_google_maps_api_key())
+map_engine_options = [
+    "Auto-Detect (Google Maps if key present)",
+    "Google Maps JavaScript API",
+    "OpenStreetMap / Folium (Fallback)"
+]
+map_engine_choice = st.sidebar.selectbox(
+    "Cartography Engine:",
+    options=map_engine_options,
+    index=0,
+    help="Google Maps API active" if has_gmaps_key else "Google Maps key not found: defaulting to OSM"
+)
+
+if "Google Maps" in map_engine_choice and not map_engine_choice.startswith("Auto"):
+    preferred_engine = "google_maps"
+elif "OpenStreetMap" in map_engine_choice:
+    preferred_engine = "folium"
+else:
+    preferred_engine = "auto"
+
 map_style = st.sidebar.radio(
-    "Tile Style:",
+    "Tile Style (for OSM Fallback):",
     options=["CartoDB Dark Matter", "CartoDB Positron"],
     index=0
 )
@@ -136,15 +156,13 @@ t_path = "data/raw/traffic_raw.csv" if enable_traffic else "data/raw/non_existen
 c_path = "data/raw/complaints_raw.json" if enable_complaints else "data/raw/non_existent.json"
 
 st.sidebar.markdown("---")
-st.sidebar.markdown("""
-<div style="background:rgba(15,23,42,0.8); border:1px solid rgba(255,255,255,0.08); border-radius:8px; padding:12px; font-size:12px; color:#94A3B8;">
-    <strong style="color:#CBD5E1;">Hackathon Explainability Defense:</strong><br/>
-    &bull; Zero opaque black-box neural nets.<br/>
-    &bull; Transparent 15-min rolling baselines.<br/>
-    &bull; Spatiotemporal correlation window: 20m.<br/>
-    &bull; Strict non-causation policy enforced.
-</div>
-""", unsafe_allow_html=True)
+st.sidebar.markdown("""<div style="background:rgba(15,23,42,0.8); border:1px solid rgba(255,255,255,0.08); border-radius:8px; padding:12px; font-size:12px; color:#94A3B8;">
+<strong style="color:#CBD5E1;">Hackathon Explainability Defense:</strong><br/>
+&bull; Zero opaque black-box neural nets.<br/>
+&bull; Transparent 15-min rolling baselines.<br/>
+&bull; Spatiotemporal correlation window: 20m.<br/>
+&bull; Strict non-causation policy enforced.
+</div>""", unsafe_allow_html=True)
 
 # ---------------------------------------------------------
 # Execute Pipeline
@@ -208,104 +226,15 @@ col_map, col_evidence = st.columns([1.55, 1.45])
 
 with col_map:
     st.subheader(f"🗺️ Live Civic Health Map ({CITY_NAME})")
-    st.caption("Interactive OpenStreetMap with zone containment rings and active multi-feed anomalies.")
-    
-    tile_name = "CartoDB dark_matter" if "Dark" in map_style else "CartoDB positron"
-    
-    m = folium.Map(
-        location=[CITY_CENTER["latitude"], CITY_CENTER["longitude"]],
-        zoom_start=CITY_CENTER["zoom_start"],
-        tiles=tile_name
+    render_citypulse_map(
+        zone_pulses=zone_pulses,
+        anomalies_df=display_anomalies,
+        alerts=display_alerts,
+        selected_zone=selected_zone_filter,
+        map_style=map_style,
+        preferred_engine=preferred_engine,
+        height=480
     )
-    
-    zone_color_map = {
-        "NORMAL": "#10B981",
-        "ATTENTION": "#F59E0B",
-        "ELEVATED": "#F97316",
-        "CRITICAL": "#EF4444"
-    }
-    
-    # 1. Plot Zone Health Rings
-    for zp in zone_pulses:
-        zid = zp["zone"]
-        zmeta = get_zone_metadata(zid)
-        color = zone_color_map.get(zp["pulse_state"], "#64748B")
-        
-        if selected_zone_filter != "All Zones" and zid != selected_zone_filter:
-            ring_opacity = 0.05
-            weight = 1
-        else:
-            ring_opacity = 0.24 if zp["pulse_state"] != "NORMAL" else 0.12
-            weight = 3 if zp["pulse_state"] == "CRITICAL" else 2
-        
-        folium.Circle(
-            location=[zmeta["latitude"], zmeta["longitude"]],
-            radius=1600,
-            color=color,
-            fill=True,
-            fill_color=color,
-            fill_opacity=ring_opacity,
-            weight=weight,
-            tooltip=f"{zid} ({zmeta['name']}): {zp['pulse_state']} | Score: {zp['pulse_score']}/100",
-            popup=folium.Popup(f"""
-            <div style="font-family:sans-serif; min-width:190px;">
-                <b style="font-size:14px;">{zid}: {zmeta['name']}</b><br/>
-                Status: <b style="color:{color};">{zp['pulse_state']}</b> ({zp['pulse_score']:.0f}/100)<br/>
-                Active Anomalies: <b>{zp['anomaly_count']}</b><br/>
-                <hr style="margin:6px 0; border:0; border-top:1px solid #ccc;"/>
-                <span style="font-size:12px; color:#555;">{zp['explanation']}</span>
-            </div>
-            """, max_width=300)
-        ).add_to(m)
-        
-    # 2. Plot Active Telemetry Anomaly Markers
-    feed_colors = {
-        "rainfall_rate": "#38BDF8",   # Sky Blue
-        "traffic_speed": "#EF4444",   # Crimson Red
-        "transit_delay": "#F97316",   # Orange
-        "311_incident": "#A855F7"     # Purple
-    }
-    
-    for _, anom in display_anomalies.iterrows():
-        lat = anom["latitude"]
-        lon = anom["longitude"]
-        feed = anom["feed_type"]
-        atype = anom["anomaly_type"]
-        val = anom["value"]
-        unit = anom["unit"]
-        sev = anom["anomaly_severity"]
-        
-        marker_color = feed_colors.get(feed, "#94A3B8")
-        
-        folium.CircleMarker(
-            location=[lat, lon],
-            radius=7,
-            color=marker_color,
-            fill=True,
-            fill_color=marker_color,
-            fill_opacity=0.9,
-            weight=2,
-            tooltip=f"{atype} ({sev}) - {val} {unit}",
-            popup=folium.Popup(f"""
-            <div style="font-family:sans-serif; min-width:180px;">
-                <b>{atype}</b> ({sev})<br/>
-                Zone: <b>{anom['zone']}</b><br/>
-                Observed: <b>{val} {unit}</b><br/>
-                Time: {anom['timestamp'].strftime('%H:%M:%S')}<br/>
-                <i>{anom['anomaly_explanation']}</i>
-            </div>
-            """, max_width=280)
-        ).add_to(m)
-        
-    st_folium(m, height=480, use_container_width=True, returned_objects=[])
-    
-    # Clean Map Legend
-    st.markdown("""
-    <div style="display:flex; justify-content:space-between; flex-wrap:wrap; background:#111827; border:1px solid rgba(255,255,255,0.08); border-radius:8px; padding:8px 14px; font-size:12px; color:#94A3B8; margin-top:6px;">
-        <div><strong>Zones:</strong> <span style="color:#10B981;">● Normal</span> &nbsp;<span style="color:#F59E0B;">● Attention</span> &nbsp;<span style="color:#F97316;">● Elevated</span> &nbsp;<span style="color:#EF4444;">● Critical</span></div>
-        <div><strong>Telemetry Pins:</strong> <span style="color:#38BDF8;">● Rain Surge</span> &nbsp;<span style="color:#EF4444;">● Traffic Slowdown</span> &nbsp;<span style="color:#F97316;">● Transit Delay</span> &nbsp;<span style="color:#A855F7;">● 311 Report</span></div>
-    </div>
-    """, unsafe_allow_html=True)
 
 with col_evidence:
     # 6. "Why am I seeing this?" Evidence Explorer
@@ -348,10 +277,8 @@ with col_health:
 # Footer
 # ---------------------------------------------------------
 st.markdown("<br/><hr style='border:0; border-top:1px solid rgba(255,255,255,0.08);'/><br/>", unsafe_allow_html=True)
-st.markdown("""
-<div style="text-align:center; font-size:12px; color:#64748B; padding-bottom:20px;">
-    <strong>CityPulse V2 &bull; AMIHACKS 1.0 Civic Intelligence Platform</strong><br/>
-    Built by 2nd-Year B.Tech AI & Data Science Students &bull; Fully Explainable Municipal Analytics<br/>
-    <em>All civic feeds are simulated for hackathon demonstration. Empirical correlations reflect spatiotemporal statistical associations, not verified causation.</em>
-</div>
-""", unsafe_allow_html=True)
+st.markdown("""<div style="text-align:center; font-size:12px; color:#64748B; padding-bottom:20px;">
+<strong>CityPulse V2 &bull; AMIHACKS 1.0 Civic Intelligence Platform</strong><br/>
+Built by 2nd-Year B.Tech AI & Data Science Students &bull; Fully Explainable Municipal Analytics<br/>
+<em>All civic feeds are simulated for hackathon demonstration. Empirical correlations reflect spatiotemporal statistical associations, not verified causation.</em>
+</div>""", unsafe_allow_html=True)

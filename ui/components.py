@@ -12,6 +12,9 @@ Provides clean, defensible, and high-contrast UI components satisfying all 10 V2
 8. Grounded Live Civic Narrative Card
 9. Telemetry Feed & Pipeline Data Health
 10. Clearly visible Demo Mode / Synthetic Data Notice
+
+All HTML strings are strictly formatted flush (0 indentation, no blank line breaks)
+to prevent Markdown parsers from inadvertently rendering raw code blocks (<pre><code>).
 """
 
 from datetime import datetime
@@ -27,29 +30,28 @@ def render_header(city_name: str = CITY_NAME, latest_sync: str = "N/A", is_live:
     pulse_dot_class = "pulse-dot-green" if is_live else "pulse-dot-amber"
     live_label = "LIVE TELEMETRY STREAM" if is_live else "HISTORICAL PLAYBACK"
     
-    st.markdown(f"""
-    <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; border-bottom:1px solid rgba(255,255,255,0.1); padding-bottom:14px; margin-bottom:16px;">
-        <div style="display:flex; align-items:center; gap:14px;">
-            <div style="font-size:36px; line-height:1;">🏙️</div>
-            <div>
-                <div style="font-size:26px; font-weight:800; color:#F8FAFC; letter-spacing:-0.02em;">
-                    CityPulse <span style="font-weight:400; font-size:16px; color:#94A3B8;">| Live Civic Health Intelligence</span>
-                </div>
-                <div style="font-size:13px; color:#94A3B8; margin-top:2px;">
-                    Real-Time Municipal Signal Fusion & Anomaly Intelligence &bull; <strong style="color:#CBD5E1;">{city_name}, Rajasthan</strong>
-                </div>
-            </div>
-        </div>
-        <div style="display:flex; align-items:center; gap:10px; margin-top:6px;">
-            <div style="background:#131B2E; border:1px solid rgba(255,255,255,0.12); border-radius:8px; padding:6px 14px; font-size:12px; color:#94A3B8;">
-                <span class="{pulse_dot_class}"></span><strong>{live_label}</strong> &bull; Sync: <code style="color:#38BDF8; font-weight:600;">{latest_sync} IST</code>
-            </div>
-            <div style="background:rgba(59,130,246,0.15); border:1px solid rgba(59,130,246,0.4); border-radius:8px; padding:6px 12px; font-size:11.5px; font-weight:700; color:#93C5FD;">
-                AMIHACKS 1.0
-            </div>
-        </div>
-    </div>
-    """, unsafe_allow_html=True)
+    header_html = f"""<div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; border-bottom:1px solid rgba(255,255,255,0.1); padding-bottom:14px; margin-bottom:16px;">
+<div style="display:flex; align-items:center; gap:14px;">
+<div style="font-size:36px; line-height:1;">🏙️</div>
+<div>
+<div style="font-size:26px; font-weight:800; color:#F8FAFC; letter-spacing:-0.02em;">
+CityPulse <span style="font-weight:400; font-size:16px; color:#94A3B8;">| Live Civic Health Intelligence</span>
+</div>
+<div style="font-size:13px; color:#94A3B8; margin-top:2px;">
+Real-Time Municipal Signal Fusion & Anomaly Intelligence &bull; <strong style="color:#CBD5E1;">{city_name}, Rajasthan</strong>
+</div>
+</div>
+</div>
+<div style="display:flex; align-items:center; gap:10px; margin-top:6px;">
+<div style="background:#131B2E; border:1px solid rgba(255,255,255,0.12); border-radius:8px; padding:6px 14px; font-size:12px; color:#94A3B8;">
+<span class="{pulse_dot_class}"></span><strong>{live_label}</strong> &bull; Sync: <code style="color:#38BDF8; font-weight:600;">{latest_sync} IST</code>
+</div>
+<div style="background:rgba(59,130,246,0.15); border:1px solid rgba(59,130,246,0.4); border-radius:8px; padding:6px 12px; font-size:11.5px; font-weight:700; color:#93C5FD;">
+AMIHACKS 1.0
+</div>
+</div>
+</div>"""
+    st.markdown(header_html, unsafe_allow_html=True)
 
 
 # ---------------------------------------------------------
@@ -57,16 +59,15 @@ def render_header(city_name: str = CITY_NAME, latest_sync: str = "N/A", is_live:
 # ---------------------------------------------------------
 def render_demo_notice():
     """Renders prominent demo / synthetic data disclosure banner."""
-    st.markdown("""
-    <div class="demo-notice-banner">
-        <div>
-            <strong>⚠️ DEMO MODE ACTIVE:</strong> Civic telemetry feeds (Weather, Traffic Corridors, 311 Incident Tickets) are simulated for hackathon demonstration in <strong>Jaipur, Rajasthan</strong>.
-        </div>
-        <div style="font-size:11.5px; color:#FBBF24; font-weight:600;">
-            ⚖️ Correlation Engine strictly reports statistical associations without assuming causation.
-        </div>
-    </div>
-    """, unsafe_allow_html=True)
+    notice_html = """<div class="demo-notice-banner">
+<div>
+<strong>⚠️ DEMO MODE ACTIVE:</strong> Civic telemetry feeds (Weather, Traffic Corridors, 311 Incident Tickets) are simulated for hackathon demonstration in <strong>Jaipur, Rajasthan</strong>.
+</div>
+<div style="font-size:11.5px; color:#FBBF24; font-weight:600;">
+⚖️ Correlation Engine strictly reports statistical associations without assuming causation.
+</div>
+</div>"""
+    st.markdown(notice_html, unsafe_allow_html=True)
 
 
 # ---------------------------------------------------------
@@ -179,28 +180,26 @@ def render_kpi_cards(df_unified: pd.DataFrame, df_anomalies: pd.DataFrame):
                 badge = '<span class="kpi-badge-normal">NORMAL</span>'
                 delta_txt = "Standard precip level"
                 
-            st.markdown(f"""
-            <div class="kpi-card">
-                <div>
-                    <div class="kpi-title">
-                        <span>🌧️ Rainfall Surge Peak</span>
-                        {badge}
-                    </div>
-                    <div class="kpi-value">{max_rain:.1f} <span style="font-size:15px; font-weight:500; color:#94A3B8;">mm/h</span></div>
-                </div>
-                <div class="kpi-delta">
-                    <span>{delta_txt}</span>
-                </div>
-            </div>
-            """, unsafe_allow_html=True)
+            kpi1_html = f"""<div class="kpi-card">
+<div>
+<div class="kpi-title">
+<span>🌧️ Rainfall Surge Peak</span>
+{badge}
+</div>
+<div class="kpi-value">{max_rain:.1f} <span style="font-size:15px; font-weight:500; color:#94A3B8;">mm/h</span></div>
+</div>
+<div class="kpi-delta">
+<span>{delta_txt}</span>
+</div>
+</div>"""
+            st.markdown(kpi1_html, unsafe_allow_html=True)
         else:
-            st.markdown("""
-            <div class="kpi-card">
-                <div class="kpi-title"><span>🌧️ Rainfall Surge Peak</span><span class="kpi-badge-normal">OFFLINE</span></div>
-                <div class="kpi-value">-- <span style="font-size:15px; color:#94A3B8;">mm/h</span></div>
-                <div class="kpi-delta"><span style="color:#64748B;">Telemetry offline</span></div>
-            </div>
-            """, unsafe_allow_html=True)
+            kpi1_offline = """<div class="kpi-card">
+<div class="kpi-title"><span>🌧️ Rainfall Surge Peak</span><span class="kpi-badge-normal">OFFLINE</span></div>
+<div class="kpi-value">-- <span style="font-size:15px; color:#94A3B8;">mm/h</span></div>
+<div class="kpi-delta"><span style="color:#64748B;">Telemetry offline</span></div>
+</div>"""
+            st.markdown(kpi1_offline, unsafe_allow_html=True)
 
     # 2. Traffic Speed / Minimum Corridor Velocity
     with col2:
@@ -221,28 +220,26 @@ def render_kpi_cards(df_unified: pd.DataFrame, df_anomalies: pd.DataFrame):
                 badge = '<span class="kpi-badge-normal">FLUID</span>'
                 delta_txt = "Standard corridor flow"
                 
-            st.markdown(f"""
-            <div class="kpi-card">
-                <div>
-                    <div class="kpi-title">
-                        <span>🚗 Min Traffic Speed</span>
-                        {badge}
-                    </div>
-                    <div class="kpi-value">{min_speed:.1f} <span style="font-size:15px; font-weight:500; color:#94A3B8;">km/h</span></div>
-                </div>
-                <div class="kpi-delta">
-                    <span>{delta_txt}</span>
-                </div>
-            </div>
-            """, unsafe_allow_html=True)
+            kpi2_html = f"""<div class="kpi-card">
+<div>
+<div class="kpi-title">
+<span>🚗 Min Traffic Speed</span>
+{badge}
+</div>
+<div class="kpi-value">{min_speed:.1f} <span style="font-size:15px; font-weight:500; color:#94A3B8;">km/h</span></div>
+</div>
+<div class="kpi-delta">
+<span>{delta_txt}</span>
+</div>
+</div>"""
+            st.markdown(kpi2_html, unsafe_allow_html=True)
         else:
-            st.markdown("""
-            <div class="kpi-card">
-                <div class="kpi-title"><span>🚗 Min Traffic Speed</span><span class="kpi-badge-normal">OFFLINE</span></div>
-                <div class="kpi-value">-- <span style="font-size:15px; color:#94A3B8;">km/h</span></div>
-                <div class="kpi-delta"><span style="color:#64748B;">Telemetry offline</span></div>
-            </div>
-            """, unsafe_allow_html=True)
+            kpi2_offline = """<div class="kpi-card">
+<div class="kpi-title"><span>🚗 Min Traffic Speed</span><span class="kpi-badge-normal">OFFLINE</span></div>
+<div class="kpi-value">-- <span style="font-size:15px; color:#94A3B8;">km/h</span></div>
+<div class="kpi-delta"><span style="color:#64748B;">Telemetry offline</span></div>
+</div>"""
+            st.markdown(kpi2_offline, unsafe_allow_html=True)
 
     # 3. Transit Delay Peak
     with col3:
@@ -263,28 +260,26 @@ def render_kpi_cards(df_unified: pd.DataFrame, df_anomalies: pd.DataFrame):
                 badge = '<span class="kpi-badge-normal">ON TIME</span>'
                 delta_txt = "Minimal transit queue"
                 
-            st.markdown(f"""
-            <div class="kpi-card">
-                <div>
-                    <div class="kpi-title">
-                        <span>🚌 Peak Transit Delay</span>
-                        {badge}
-                    </div>
-                    <div class="kpi-value">{max_delay:.1f} <span style="font-size:15px; font-weight:500; color:#94A3B8;">min</span></div>
-                </div>
-                <div class="kpi-delta">
-                    <span>{delta_txt}</span>
-                </div>
-            </div>
-            """, unsafe_allow_html=True)
+            kpi3_html = f"""<div class="kpi-card">
+<div>
+<div class="kpi-title">
+<span>🚌 Peak Transit Delay</span>
+{badge}
+</div>
+<div class="kpi-value">{max_delay:.1f} <span style="font-size:15px; font-weight:500; color:#94A3B8;">min</span></div>
+</div>
+<div class="kpi-delta">
+<span>{delta_txt}</span>
+</div>
+</div>"""
+            st.markdown(kpi3_html, unsafe_allow_html=True)
         else:
-            st.markdown("""
-            <div class="kpi-card">
-                <div class="kpi-title"><span>🚌 Peak Transit Delay</span><span class="kpi-badge-normal">OFFLINE</span></div>
-                <div class="kpi-value">-- <span style="font-size:15px; color:#94A3B8;">min</span></div>
-                <div class="kpi-delta"><span style="color:#64748B;">Telemetry offline</span></div>
-            </div>
-            """, unsafe_allow_html=True)
+            kpi3_offline = """<div class="kpi-card">
+<div class="kpi-title"><span>🚌 Peak Transit Delay</span><span class="kpi-badge-normal">OFFLINE</span></div>
+<div class="kpi-value">-- <span style="font-size:15px; color:#94A3B8;">min</span></div>
+<div class="kpi-delta"><span style="color:#64748B;">Telemetry offline</span></div>
+</div>"""
+            st.markdown(kpi3_offline, unsafe_allow_html=True)
 
     # 4. 311 Citizen Reports
     with col4:
@@ -304,28 +299,26 @@ def render_kpi_cards(df_unified: pd.DataFrame, df_anomalies: pd.DataFrame):
                 badge = '<span class="kpi-badge-normal">LOW VOL</span>'
                 delta_txt = "Standard call volume"
                 
-            st.markdown(f"""
-            <div class="kpi-card">
-                <div>
-                    <div class="kpi-title">
-                        <span>📢 311 Citizen Reports</span>
-                        {badge}
-                    </div>
-                    <div class="kpi-value">{total_tickets} <span style="font-size:15px; font-weight:500; color:#94A3B8;">filed</span></div>
-                </div>
-                <div class="kpi-delta">
-                    <span>{delta_txt}</span>
-                </div>
-            </div>
-            """, unsafe_allow_html=True)
+            kpi4_html = f"""<div class="kpi-card">
+<div>
+<div class="kpi-title">
+<span>📢 311 Citizen Reports</span>
+{badge}
+</div>
+<div class="kpi-value">{total_tickets} <span style="font-size:15px; font-weight:500; color:#94A3B8;">filed</span></div>
+</div>
+<div class="kpi-delta">
+<span>{delta_txt}</span>
+</div>
+</div>"""
+            st.markdown(kpi4_html, unsafe_allow_html=True)
         else:
-            st.markdown("""
-            <div class="kpi-card">
-                <div class="kpi-title"><span>📢 311 Citizen Reports</span><span class="kpi-badge-normal">OFFLINE</span></div>
-                <div class="kpi-value">-- <span style="font-size:15px; color:#94A3B8;">filed</span></div>
-                <div class="kpi-delta"><span style="color:#64748B;">Feed offline</span></div>
-            </div>
-            """, unsafe_allow_html=True)
+            kpi4_offline = """<div class="kpi-card">
+<div class="kpi-title"><span>📢 311 Citizen Reports</span><span class="kpi-badge-normal">OFFLINE</span></div>
+<div class="kpi-value">-- <span style="font-size:15px; color:#94A3B8;">filed</span></div>
+<div class="kpi-delta"><span style="color:#64748B;">Feed offline</span></div>
+</div>"""
+            st.markdown(kpi4_offline, unsafe_allow_html=True)
 
 
 # ---------------------------------------------------------
@@ -338,31 +331,30 @@ def render_narrative_card(summary_result: dict):
     traceable_ids = summary_result.get("traceable_evidence_ids", [])
     trace_str = ", ".join(traceable_ids) if traceable_ids else "Direct Telemetry Stream"
     
-    st.markdown(f"""
-    <div class="narrative-card">
-        <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px; margin-bottom:10px;">
-            <div style="display:flex; align-items:center; gap:8px;">
-                <span style="font-size:18px;">📢</span>
-                <span style="font-weight:700; font-size:15.5px; color:#F8FAFC;">Live Grounded Civic Narrative</span>
-            </div>
-            <div style="display:flex; gap:6px;">
-                <span style="font-size:11px; background:rgba(59,130,246,0.22); color:#93C5FD; border:1px solid rgba(59,130,246,0.4); padding:3px 9px; border-radius:4px; font-weight:700;">
-                    ⚡ {gen_by}
-                </span>
-                <span style="font-size:11px; background:rgba(16,185,129,0.22); color:#6EE7B7; border:1px solid rgba(16,185,129,0.4); padding:3px 9px; border-radius:4px; font-weight:700;">
-                    🛡️ Grounding Verified (100%)
-                </span>
-            </div>
-        </div>
-        <p style="margin:0 0 12px 0; font-size:15px; color:#F1F5F9; line-height:1.65; font-weight:400;">
-            {narrative}
-        </p>
-        <div style="font-size:12px; color:#94A3B8; border-top:1px solid rgba(255,255,255,0.08); padding-top:8px; display:flex; justify-content:space-between; flex-wrap:wrap; gap:6px;">
-            <span><strong>Traceable Evidence:</strong> <code style="color:#38BDF8;">{trace_str}</code></span>
-            <span style="font-style:italic; color:#CBD5E1;">Correlation ≠ Causation strictly enforced &bull; 100% grounded in empirical telemetry</span>
-        </div>
-    </div>
-    """, unsafe_allow_html=True)
+    narrative_html = f"""<div class="narrative-card">
+<div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px; margin-bottom:10px;">
+<div style="display:flex; align-items:center; gap:8px;">
+<span style="font-size:18px;">📢</span>
+<span style="font-weight:700; font-size:15.5px; color:#F8FAFC;">Live Grounded Civic Narrative</span>
+</div>
+<div style="display:flex; gap:6px;">
+<span style="font-size:11px; background:rgba(59,130,246,0.22); color:#93C5FD; border:1px solid rgba(59,130,246,0.4); padding:3px 9px; border-radius:4px; font-weight:700;">
+⚡ {gen_by}
+</span>
+<span style="font-size:11px; background:rgba(16,185,129,0.22); color:#6EE7B7; border:1px solid rgba(16,185,129,0.4); padding:3px 9px; border-radius:4px; font-weight:700;">
+🛡️ Grounding Verified (100%)
+</span>
+</div>
+</div>
+<p style="margin:0 0 12px 0; font-size:15px; color:#F1F5F9; line-height:1.65; font-weight:400;">
+{narrative}
+</p>
+<div style="font-size:12px; color:#94A3B8; border-top:1px solid rgba(255,255,255,0.08); padding-top:8px; display:flex; justify-content:space-between; flex-wrap:wrap; gap:6px;">
+<span><strong>Traceable Evidence:</strong> <code style="color:#38BDF8;">{trace_str}</code></span>
+<span style="font-style:italic; color:#CBD5E1;">Correlation ≠ Causation strictly enforced &bull; 100% grounded in empirical telemetry</span>
+</div>
+</div>"""
+    st.markdown(narrative_html, unsafe_allow_html=True)
 
 
 # ---------------------------------------------------------
@@ -377,13 +369,12 @@ def render_active_anomalies_section(active_anomalies: pd.DataFrame):
     st.caption("Individual sensor deviations exceeding statistical baselines (15-min rolling window).")
     
     if active_anomalies.empty:
-        st.markdown("""
-        <div class="civic-card" style="text-align:center; padding:24px;">
-            <div style="font-size:28px; margin-bottom:6px;">✅</div>
-            <div style="font-size:15px; font-weight:700; color:#34D399;">All Telemetry Streams Operating Within Normal Baselines</div>
-            <div style="font-size:12.5px; color:#94A3B8;">No statistical anomalies detected across weather, traffic corridors, or 311 citizen tickets.</div>
-        </div>
-        """, unsafe_allow_html=True)
+        empty_html = """<div class="civic-card" style="text-align:center; padding:24px;">
+<div style="font-size:28px; margin-bottom:6px;">✅</div>
+<div style="font-size:15px; font-weight:700; color:#34D399;">All Telemetry Streams Operating Within Normal Baselines</div>
+<div style="font-size:12.5px; color:#94A3B8;">No statistical anomalies detected across weather, traffic corridors, or 311 citizen tickets.</div>
+</div>"""
+        st.markdown(empty_html, unsafe_allow_html=True)
         return
         
     # Anomaly breakdown counters
@@ -394,33 +385,29 @@ def render_active_anomalies_section(active_anomalies: pd.DataFrame):
     
     col_c1, col_c2, col_c3, col_c4 = st.columns(4)
     with col_c1:
-        st.markdown(f"""
-        <div style="background:#131B2E; border:1px solid rgba(255,255,255,0.08); border-radius:8px; padding:10px 14px; text-align:center;">
-            <div style="font-size:11px; color:#94A3B8; text-transform:uppercase;">Precipitation Surges</div>
-            <div style="font-size:20px; font-weight:800; color:#38BDF8;">{rain_count}</div>
-        </div>
-        """, unsafe_allow_html=True)
+        c1_html = f"""<div style="background:#131B2E; border:1px solid rgba(255,255,255,0.08); border-radius:8px; padding:10px 14px; text-align:center;">
+<div style="font-size:11px; color:#94A3B8; text-transform:uppercase;">Precipitation Surges</div>
+<div style="font-size:20px; font-weight:800; color:#38BDF8;">{rain_count}</div>
+</div>"""
+        st.markdown(c1_html, unsafe_allow_html=True)
     with col_c2:
-        st.markdown(f"""
-        <div style="background:#131B2E; border:1px solid rgba(255,255,255,0.08); border-radius:8px; padding:10px 14px; text-align:center;">
-            <div style="font-size:11px; color:#94A3B8; text-transform:uppercase;">Speed Slowdowns</div>
-            <div style="font-size:20px; font-weight:800; color:#EF4444;">{speed_count}</div>
-        </div>
-        """, unsafe_allow_html=True)
+        c2_html = f"""<div style="background:#131B2E; border:1px solid rgba(255,255,255,0.08); border-radius:8px; padding:10px 14px; text-align:center;">
+<div style="font-size:11px; color:#94A3B8; text-transform:uppercase;">Speed Slowdowns</div>
+<div style="font-size:20px; font-weight:800; color:#EF4444;">{speed_count}</div>
+</div>"""
+        st.markdown(c2_html, unsafe_allow_html=True)
     with col_c3:
-        st.markdown(f"""
-        <div style="background:#131B2E; border:1px solid rgba(255,255,255,0.08); border-radius:8px; padding:10px 14px; text-align:center;">
-            <div style="font-size:11px; color:#94A3B8; text-transform:uppercase;">Transit Delay Spikes</div>
-            <div style="font-size:20px; font-weight:800; color:#F97316;">{delay_count}</div>
-        </div>
-        """, unsafe_allow_html=True)
+        c3_html = f"""<div style="background:#131B2E; border:1px solid rgba(255,255,255,0.08); border-radius:8px; padding:10px 14px; text-align:center;">
+<div style="font-size:11px; color:#94A3B8; text-transform:uppercase;">Transit Delay Spikes</div>
+<div style="font-size:20px; font-weight:800; color:#F97316;">{delay_count}</div>
+</div>"""
+        st.markdown(c3_html, unsafe_allow_html=True)
     with col_c4:
-        st.markdown(f"""
-        <div style="background:#131B2E; border:1px solid rgba(255,255,255,0.08); border-radius:8px; padding:10px 14px; text-align:center;">
-            <div style="font-size:11px; color:#94A3B8; text-transform:uppercase;">Complaint Clusters</div>
-            <div style="font-size:20px; font-weight:800; color:#A855F7;">{comp_count}</div>
-        </div>
-        """, unsafe_allow_html=True)
+        c4_html = f"""<div style="background:#131B2E; border:1px solid rgba(255,255,255,0.08); border-radius:8px; padding:10px 14px; text-align:center;">
+<div style="font-size:11px; color:#94A3B8; text-transform:uppercase;">Complaint Clusters</div>
+<div style="font-size:20px; font-weight:800; color:#A855F7;">{comp_count}</div>
+</div>"""
+        st.markdown(c4_html, unsafe_allow_html=True)
         
     st.markdown("<br/>", unsafe_allow_html=True)
     
@@ -448,34 +435,33 @@ def render_active_anomalies_section(active_anomalies: pd.DataFrame):
         sev_color = "#F87171" if sev == "HIGH" else "#FBBF24"
         sev_bg = "rgba(239,68,68,0.2)" if sev == "HIGH" else "rgba(245,158,11,0.2)"
         
-        st.markdown(f"""
-        <div class="anomaly-row-card">
-            <div style="display:flex; align-items:center; gap:12px;">
-                <div style="font-size:20px;">{icon}</div>
-                <div>
-                    <div style="font-weight:700; color:#F8FAFC; font-size:14px;">
-                        {atype.replace('_', ' ')} &bull; <span style="color:#CBD5E1;">{zone}</span>
-                    </div>
-                    <div style="font-size:12px; color:#94A3B8; margin-top:2px;">
-                        {row['anomaly_explanation']}
-                    </div>
-                </div>
-            </div>
-            <div style="display:flex; align-items:center; gap:14px;">
-                <div style="text-align:right;">
-                    <div style="font-size:14px; font-weight:700; color:#F8FAFC; font-family:'JetBrains Mono';">
-                        {val} {unit}
-                    </div>
-                    <div style="font-size:11px; color:#94A3B8; font-family:'JetBrains Mono';">
-                        dev: {dev:+.1f}
-                    </div>
-                </div>
-                <div style="background:{sev_bg}; color:{sev_color}; border:1px solid {sev_color}55; padding:3px 8px; border-radius:5px; font-size:11px; font-weight:700;">
-                    {sev}
-                </div>
-            </div>
-        </div>
-        """, unsafe_allow_html=True)
+        row_html = f"""<div class="anomaly-row-card">
+<div style="display:flex; align-items:center; gap:12px;">
+<div style="font-size:20px;">{icon}</div>
+<div>
+<div style="font-weight:700; color:#F8FAFC; font-size:14px;">
+{atype.replace('_', ' ')} &bull; <span style="color:#CBD5E1;">{zone}</span>
+</div>
+<div style="font-size:12px; color:#94A3B8; margin-top:2px;">
+{row['anomaly_explanation']}
+</div>
+</div>
+</div>
+<div style="display:flex; align-items:center; gap:14px;">
+<div style="text-align:right;">
+<div style="font-size:14px; font-weight:700; color:#F8FAFC; font-family:'JetBrains Mono';">
+{val} {unit}
+</div>
+<div style="font-size:11px; color:#94A3B8; font-family:'JetBrains Mono';">
+dev: {dev:+.1f}
+</div>
+</div>
+<div style="background:{sev_bg}; color:{sev_color}; border:1px solid {sev_color}55; padding:3px 8px; border-radius:5px; font-size:11px; font-weight:700;">
+{sev}
+</div>
+</div>
+</div>"""
+        st.markdown(row_html, unsafe_allow_html=True)
 
 
 # ---------------------------------------------------------
@@ -490,13 +476,12 @@ def render_evidence_explorer_section(alerts: list[dict]):
     st.caption("Fusing co-occurring signals within the same zone and 20-minute rolling window without assuming causation.")
     
     if not alerts:
-        st.markdown("""
-        <div class="civic-card" style="text-align:center; padding:28px;">
-            <div style="font-size:32px; margin-bottom:8px;">✅</div>
-            <div style="font-size:16px; font-weight:700; color:#34D399; margin-bottom:4px;">No Multi-Signal Correlated Disruptions Active</div>
-            <div style="font-size:13px; color:#94A3B8;">All civic feeds are operating independently within standard tolerances.</div>
-        </div>
-        """, unsafe_allow_html=True)
+        no_alert_html = """<div class="civic-card" style="text-align:center; padding:28px;">
+<div style="font-size:32px; margin-bottom:8px;">✅</div>
+<div style="font-size:16px; font-weight:700; color:#34D399; margin-bottom:4px;">No Multi-Signal Correlated Disruptions Active</div>
+<div style="font-size:13px; color:#94A3B8;">All civic feeds are operating independently within standard tolerances.</div>
+</div>"""
+        st.markdown(no_alert_html, unsafe_allow_html=True)
         return
         
     for alert in alerts:
@@ -526,63 +511,58 @@ def render_evidence_explorer_section(alerts: list[dict]):
         
         chain_render = '<span class="evidence-arrow"> &bull; </span>'.join(steps_html)
         
-        st.markdown(f"""
-        <div class="civic-card">
-            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
-                <div>
-                    <span style="font-size:12px; color:#94A3B8; font-weight:700; letter-spacing:0.04em;">{alert_id} &bull; {category.upper()}</span>
-                </div>
-                <span class="{badge_class}" style="font-size:11px; padding:3px 9px;">{sev} PRIORITY</span>
-            </div>
-            
-            <h4 style="margin:4px 0 8px 0; font-size:16px; color:#F8FAFC; font-weight:700;">{headline}</h4>
-            
-            <div style="font-size:13px; color:#CBD5E1; margin-bottom:10px;">
-                📍 <strong>Location:</strong> {zone} ({zone_name}) &nbsp;|&nbsp; ⏱️ <strong>Active Window:</strong> {start_t} &rarr; {end_t} (20-min spatiotemporal correlation)
-            </div>
-            
-            <div style="font-size:11.5px; font-weight:600; color:#94A3B8; text-transform:uppercase; margin-bottom:4px;">
-                Simultaneous Empirical Telemetry Chain:
-            </div>
-            <div class="evidence-chain-container">
-                {chain_render}
-            </div>
-            
-            <div class="disclaimer-box">
-                ⚖️ <strong>Spatiotemporal Association:</strong> Observed co-occurrence within a 20-minute window in {zone}. This is reported as an empirical statistical relationship, not proven causation.
-            </div>
-        </div>
-        """, unsafe_allow_html=True)
+        alert_html = f"""<div class="civic-card">
+<div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
+<div>
+<span style="font-size:12px; color:#94A3B8; font-weight:700; letter-spacing:0.04em;">{alert_id} &bull; {category.upper()}</span>
+</div>
+<span class="{badge_class}" style="font-size:11px; padding:3px 9px;">{sev} PRIORITY</span>
+</div>
+<h4 style="margin:4px 0 8px 0; font-size:16px; color:#F8FAFC; font-weight:700;">{headline}</h4>
+<div style="font-size:13px; color:#CBD5E1; margin-bottom:10px;">
+📍 <strong>Location:</strong> {zone} ({zone_name}) &nbsp;|&nbsp; ⏱️ <strong>Active Window:</strong> {start_t} &rarr; {end_t} (20-min spatiotemporal correlation)
+</div>
+<div style="font-size:11.5px; font-weight:600; color:#94A3B8; text-transform:uppercase; margin-bottom:4px;">
+Simultaneous Empirical Telemetry Chain:
+</div>
+<div class="evidence-chain-container">
+{chain_render}
+</div>
+<div class="disclaimer-box">
+⚖️ <strong>Spatiotemporal Association:</strong> Observed co-occurrence within a 20-minute window in {zone}. This is reported as an empirical statistical relationship, not proven causation.
+</div>
+</div>"""
+        st.markdown(alert_html, unsafe_allow_html=True)
         
         # 8-Question Audit Matrix
         why = alert.get("why_this_alert", {})
         if why:
             with st.expander(f"🔍 Audit Inspection Matrix ({alert_id}): Why was this flagged?"):
-                st.markdown(f"""
-                **1. What changed?**  
-                {why.get('question_1_what_changed', 'N/A')}
-                
-                **2. Where did it happen?**  
-                {why.get('question_2_where', 'N/A')}
-                
-                **3. When did it happen?**  
-                {why.get('question_3_when', 'N/A')}
-                
-                **4. Which signals were involved?**  
-                `{', '.join(why.get('question_4_signals_involved', []))}`
-                
-                **5. What is the empirical evidence?**  
-                * {'<br/>* '.join(why.get('question_5_evidence', []))}
-                
-                **6. Why is this considered unusual?**  
-                {why.get('question_6_why_unusual', 'N/A')}
-                
-                **7. Confidence & Strength:**  
-                {why.get('question_7_confidence', 'N/A')}
-                
-                **8. Scientific Disclaimer:**  
-                *{why.get('relationship_statement', 'Reported as a possible relationship, not confirmed causation.')}*
-                """)
+                ev_bullets = "\n".join(f"- {p}" for p in why.get("question_5_evidence", []))
+                audit_md = f"""**1. What changed?**  
+{why.get('question_1_what_changed', 'N/A')}
+
+**2. Where did it happen?**  
+{why.get('question_2_where', 'N/A')}
+
+**3. When did it happen?**  
+{why.get('question_3_when', 'N/A')}
+
+**4. Which signals were involved?**  
+`{', '.join(why.get('question_4_signals_involved', []))}`
+
+**5. What is the empirical evidence?**  
+{ev_bullets}
+
+**6. Why is this considered unusual?**  
+{why.get('question_6_why_unusual', 'N/A')}
+
+**7. Confidence & Strength:**  
+{why.get('question_7_confidence', 'N/A')}
+
+**8. Scientific Disclaimer:**  
+*{why.get('relationship_statement', 'Reported as a possible relationship, not confirmed causation.')}*"""
+                st.markdown(audit_md)
 
 
 # ---------------------------------------------------------
@@ -602,15 +582,14 @@ def render_zone_grid(zone_pulses: list[dict]):
         border_highlight = "rgba(239,68,68,0.5)" if state == "CRITICAL" else "rgba(255,255,255,0.08)"
         
         with cols[idx]:
-            st.markdown(f"""
-            <div class="zone-cell-card" style="border-color:{border_highlight};">
-                <div style="font-weight:800; font-size:15px; color:#F8FAFC; margin-bottom:2px;">{zid}</div>
-                <div style="font-size:11px; color:#94A3B8; margin-bottom:10px; height:28px; line-height:1.2;">{zname}</div>
-                <span class="pulse-badge-{state}" style="font-size:11px; padding:3px 8px;">{state}</span>
-                <div style="margin-top:10px; font-size:14px; font-weight:800; color:#F1F5F9;">{score:.0f}<span style="font-size:11px; color:#64748B; font-weight:400;">/100</span></div>
-                <div style="font-size:11.5px; color:#94A3B8; margin-top:2px;">{anom_c} anomalies</div>
-            </div>
-            """, unsafe_allow_html=True)
+            zone_html = f"""<div class="zone-cell-card" style="border-color:{border_highlight};">
+<div style="font-weight:800; font-size:15px; color:#F8FAFC; margin-bottom:2px;">{zid}</div>
+<div style="font-size:11px; color:#94A3B8; margin-bottom:10px; height:28px; line-height:1.2;">{zname}</div>
+<span class="pulse-badge-{state}" style="font-size:11px; padding:3px 8px;">{state}</span>
+<div style="margin-top:10px; font-size:14px; font-weight:800; color:#F1F5F9;">{score:.0f}<span style="font-size:11px; color:#64748B; font-weight:400;">/100</span></div>
+<div style="font-size:11.5px; color:#94A3B8; margin-top:2px;">{anom_c} anomalies</div>
+</div>"""
+            st.markdown(zone_html, unsafe_allow_html=True)
 
 
 # ---------------------------------------------------------
@@ -619,11 +598,10 @@ def render_zone_grid(zone_pulses: list[dict]):
 def render_timeline(active_anomalies: pd.DataFrame, limit: int = 10):
     """Renders improved chronological record of active anomalies."""
     if active_anomalies.empty:
-        st.markdown("""
-        <div style="background:#131B2E; border:1px solid rgba(255,255,255,0.08); border-radius:8px; padding:16px; text-align:center; color:#94A3B8;">
-            No anomalies recorded in current observation window.
-        </div>
-        """, unsafe_allow_html=True)
+        empty_t_html = """<div style="background:#131B2E; border:1px solid rgba(255,255,255,0.08); border-radius:8px; padding:16px; text-align:center; color:#94A3B8;">
+No anomalies recorded in current observation window.
+</div>"""
+        st.markdown(empty_t_html, unsafe_allow_html=True)
         return
         
     timeline_df = active_anomalies.sort_values(by="timestamp", ascending=False).head(limit)
@@ -648,22 +626,21 @@ def render_timeline(active_anomalies: pd.DataFrame, limit: int = 10):
         
         sev_color = "#F87171" if sev == "HIGH" else "#FBBF24"
         
-        st.markdown(f"""
-        <div style="padding:10px 14px; border-bottom:1px solid rgba(255,255,255,0.06); font-size:13px; background:#111827; border-radius:8px; margin-bottom:8px;">
-            <div style="display:flex; justify-content:space-between; align-items:center;">
-                <div>
-                    <span style="font-family:'JetBrains Mono', monospace; font-size:12px; color:#38BDF8; font-weight:600;">{t_str}</span>
-                    &bull; <strong style="color:#F8FAFC;">{zone}</strong> &bull; <span>{icon} {feed_label}</span>
-                </div>
-                <span style="color:{sev_color}; font-size:11px; font-weight:700; border:1px solid {sev_color}44; background:{sev_color}18; padding:1px 6px; border-radius:4px;">
-                    {sev}
-                </span>
-            </div>
-            <div style="margin-top:4px; font-size:12px; color:#CBD5E1;">
-                <strong>Reading:</strong> {val} {unit} &bull; <span style="color:#94A3B8;">{event['anomaly_explanation']}</span>
-            </div>
-        </div>
-        """, unsafe_allow_html=True)
+        event_html = f"""<div style="padding:10px 14px; border-bottom:1px solid rgba(255,255,255,0.06); font-size:13px; background:#111827; border-radius:8px; margin-bottom:8px;">
+<div style="display:flex; justify-content:space-between; align-items:center;">
+<div>
+<span style="font-family:'JetBrains Mono', monospace; font-size:12px; color:#38BDF8; font-weight:600;">{t_str}</span>
+&bull; <strong style="color:#F8FAFC;">{zone}</strong> &bull; <span>{icon} {feed_label}</span>
+</div>
+<span style="color:{sev_color}; font-size:11px; font-weight:700; border:1px solid {sev_color}44; background:{sev_color}18; padding:1px 6px; border-radius:4px;">
+{sev}
+</span>
+</div>
+<div style="margin-top:4px; font-size:12px; color:#CBD5E1;">
+<strong>Reading:</strong> {val} {unit} &bull; <span style="color:#94A3B8;">{event['anomaly_explanation']}</span>
+</div>
+</div>"""
+        st.markdown(event_html, unsafe_allow_html=True)
 
 
 # ---------------------------------------------------------
@@ -688,19 +665,18 @@ def render_data_health(val_report: dict):
         badge_fg = "#34D399" if is_healthy else "#F87171"
         badge_border = "rgba(16,185,129,0.4)" if is_healthy else "rgba(239,68,68,0.4)"
         
-        st.markdown(f"""
-        <div style="background:#131B2E; border:1px solid rgba(255,255,255,0.08); border-radius:8px; padding:12px 16px; margin-bottom:8px;">
-            <div style="display:flex; justify-content:space-between; align-items:center;">
-                <span style="font-weight:600; font-size:13.5px; color:#F8FAFC;">{feed_label}</span>
-                <span style="background:{badge_bg}; color:{badge_fg}; border:1px solid {badge_border}; font-size:10.5px; font-weight:700; padding:2px 8px; border-radius:4px;">
-                    {badge_text}
-                </span>
-            </div>
-            <div style="font-size:12px; color:#94A3B8; margin-top:4px;">
-                Status: {status_text}
-            </div>
-        </div>
-        """, unsafe_allow_html=True)
+        stream_html = f"""<div style="background:#131B2E; border:1px solid rgba(255,255,255,0.08); border-radius:8px; padding:12px 16px; margin-bottom:8px;">
+<div style="display:flex; justify-content:space-between; align-items:center;">
+<span style="font-weight:600; font-size:13.5px; color:#F8FAFC;">{feed_label}</span>
+<span style="background:{badge_bg}; color:{badge_fg}; border:1px solid {badge_border}; font-size:10.5px; font-weight:700; padding:2px 8px; border-radius:4px;">
+{badge_text}
+</span>
+</div>
+<div style="font-size:12px; color:#94A3B8; margin-top:4px;">
+Status: {status_text}
+</div>
+</div>"""
+        st.markdown(stream_html, unsafe_allow_html=True)
         
     val_init = val_report.get("initial_rows", 0)
     val_dropped = (
@@ -711,20 +687,19 @@ def render_data_health(val_report: dict):
     )
     val_clean = val_report.get("final_valid_rows", 0)
     
-    st.markdown(f"""
-    <div style="background:rgba(15,23,42,0.8); border:1px solid rgba(255,255,255,0.08); border-radius:8px; padding:12px 16px; font-size:12px; color:#CBD5E1; margin-top:10px;">
-        <div style="font-weight:700; color:#F8FAFC; margin-bottom:6px; font-size:13px;">Schema Normalization Audit:</div>
-        <div style="display:flex; justify-content:space-between; margin-bottom:4px;">
-            <span style="color:#94A3B8;">Initial Raw Telemetry Records:</span>
-            <strong style="font-family:'JetBrains Mono'; color:#F8FAFC;">{val_init}</strong>
-        </div>
-        <div style="display:flex; justify-content:space-between; margin-bottom:4px;">
-            <span style="color:#94A3B8;">Corrupted / Out-of-bounds Dropped:</span>
-            <strong style="color:#F87171; font-family:'JetBrains Mono';">{val_dropped}</strong>
-        </div>
-        <div style="display:flex; justify-content:space-between; border-top:1px solid rgba(255,255,255,0.08); padding-top:6px; margin-top:6px;">
-            <span style="color:#94A3B8;">Final Clean Validated Records:</span>
-            <strong style="color:#34D399; font-family:'JetBrains Mono';">{val_clean}</strong>
-        </div>
-    </div>
-    """, unsafe_allow_html=True)
+    audit_html = f"""<div style="background:rgba(15,23,42,0.8); border:1px solid rgba(255,255,255,0.08); border-radius:8px; padding:12px 16px; font-size:12px; color:#CBD5E1; margin-top:10px;">
+<div style="font-weight:700; color:#F8FAFC; margin-bottom:6px; font-size:13px;">Schema Normalization Audit:</div>
+<div style="display:flex; justify-content:space-between; margin-bottom:4px;">
+<span style="color:#94A3B8;">Initial Raw Telemetry Records:</span>
+<strong style="font-family:'JetBrains Mono'; color:#F8FAFC;">{val_init}</strong>
+</div>
+<div style="display:flex; justify-content:space-between; margin-bottom:4px;">
+<span style="color:#94A3B8;">Corrupted / Out-of-bounds Dropped:</span>
+<strong style="color:#F87171; font-family:'JetBrains Mono';">{val_dropped}</strong>
+</div>
+<div style="display:flex; justify-content:space-between; border-top:1px solid rgba(255,255,255,0.08); padding-top:6px; margin-top:6px;">
+<span style="color:#94A3B8;">Final Clean Validated Records:</span>
+<strong style="color:#34D399; font-family:'JetBrains Mono';">{val_clean}</strong>
+</div>
+</div>"""
+    st.markdown(audit_html, unsafe_allow_html=True)
