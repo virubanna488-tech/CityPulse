@@ -1,0 +1,290 @@
+[
+  {
+    "ticket_id": "TKT-1001",
+    "created_at": "2026-09-24 13:00:26",
+    "zone_code": "Zone-F",
+    "complaint_type": "pothole",
+    "description": "Pothole reported on secondary road",
+    "source_system": "Demo data \u2014 simulated civic feeds"
+  },
+  {
+    "ticket_id": "TKT-1002",
+    "created_at": "2026-09-24 13:08:11",
+    "zone_code": "Zone-C",
+    "complaint_type": "pothole",
+    "description": "Pothole reported on secondary road",
+    "source_system": "Demo data \u2014 simulated civic feeds"
+  },
+  {
+    "ticket_id": "TKT-1003",
+    "created_at": "2026-09-24 13:16:14",
+    "zone_code": "Zone-A",
+    "complaint_type": "pothole",
+    "description": "Pothole reported on secondary road",
+    "source_system": "Demo data \u2014 simulated civic feeds"
+  },
+  {
+    "ticket_id": "TKT-1009",
+    "created_at": "2026-09-24 13:30:25",
+    "zone_code": "Zone-B",
+    "complaint_type": "waterlogging",
+    "description": "Water accumulation near market junction",
+    "source_system": "Demo data \u2014 simulated civic feeds"
+  },
+  {
+    "ticket_id": "TKT-1011",
+    "created_at": "2026-09-24 13:32:48",
+    "zone_code": "Zone-B",
+    "complaint_type": "waterlogging",
+    "description": "Water accumulation near market junction",
+    "source_system": "Demo data \u2014 simulated civic feeds"
+  },
+  {
+    "ticket_id": "TKT-1010",
+    "created_at": "2026-09-24 13:33:43",
+    "zone_code": "Zone-B",
+    "complaint_type": "waterlogging",
+    "description": "Water accumulation near market junction",
+    "source_system": "Demo data \u2014 simulated civic feeds"
+  },
+  {
+    "ticket_id": "TKT-1016",
+    "created_at": "2026-09-24 13:35:44",
+    "zone_code": "Zone-B",
+    "complaint_type": "drain_overflow",
+    "description": "Storm drain clogged and overflowing onto road",
+    "source_system": "Demo data \u2014 simulated civic feeds"
+  },
+  {
+    "ticket_id": "TKT-1017",
+    "created_at": "2026-09-24 13:37:41",
+    "zone_code": "Zone-B",
+    "complaint_type": "waterlogging",
+    "description": "Waterlogging knee-deep on main transit artery",
+    "source_system": "Demo data \u2014 simulated civic feeds"
+  },
+  {
+    "ticket_id": "TKT-1018",
+    "created_at": "2026-09-24 13:38:48",
+    "zone_code": "Zone-B",
+    "complaint_type": "waterlogging",
+    "description": "Waterlogging knee-deep on main transit artery",
+    "source_system": "Demo data \u2014 simulated civic feeds"
+  },
+  {
+    "ticket_id": "TKT-1014",
+    "created_at": "2026-09-24 13:38:58",
+    "zone_code": "Zone-B",
+    "complaint_type": "drain_overflow",
+    "description": "Storm drain clogged and overflowing onto road",
+    "source_system": "Demo data \u2014 simulated civic feeds"
+  },
+  {
+    "ticket_id": "TKT-1015",
+    "created_at": "2026-09-24 13:42:46",
+    "zone_code": "Zone-B",
+    "complaint_type": "drain_overflow",
+    "description": "Storm drain clogged and overflowing onto road",
+    "source_system": "Demo data \u2014 simulated civic feeds"
+  },
+  {
+    "ticket_id": "TKT-1012",
+    "created_at": "2026-09-24 13:43:02",
+    "zone_code": "Zone-B",
+    "complaint_type": "drain_overflow",
+    "description": "Storm drain clogged and overflowing onto road",
+    "source_system": "Demo data \u2014 simulated civic feeds"
+  },
+  {
+    "ticket_id": "TKT-1013",
+    "created_at": "2026-09-24 13:44:13",
+    "zone_code": "Zone-B",
+    "complaint_type": "waterlogging",
+    "description": "Waterlogging knee-deep on main transit artery",
+    "source_system": "Demo data \u2014 simulated civic feeds"
+  },
+  {
+    "ticket_id": "TKT-1019",
+    "created_at": "2026-09-24 13:44:53",
+    "zone_code": "Zone-B",
+    "complaint_type": "drain_overflow",
+    "description": "Storm drain clogged and overflowing onto road",
+    "source_system": "Demo data \u2014 simulated civic feeds"
+  },
+  {
+    "ticket_id": "TKT-1026",
+    "created_at": "2026-09-24 13:46:00",
+    "zone_code": "Zone-B",
+    "complaint_type": "drain_overflow",
+    "description": "Drainage backing up near bus stop",
+    "source_system": "Demo data \u2014 simulated civic feeds"
+  },
+  {
+    "ticket_id": "TKT-1022",
+    "created_at": "2026-09-24 13:46:54",
+    "zone_code": "Zone-B",
+    "complaint_type": "drain_overflow",
+    "description": "Drainage backing up near bus stop",
+    "source_system": "Demo data \u2014 simulated civic feeds"
+  },
+  {
+    "ticket_id": "TKT-1021",
+    "created_at": "2026-09-24 13:48:23",
+    "zone_code": "Zone-B",
+    "complaint_type": "drain_overflow",
+    "description": "Drainage backing up near bus stop",
+    "source_system": "Demo data \u2014 simulated civic feeds"
+  },
+  {
+    "ticket_id": "TKT-1004",
+    "created_at": "2026-09-24 13:48:37",
+    "zone_code": "Zone-F",
+    "complaint_type": "noise_complaint",
+    "description": "Loud construction past allowed hours",
+    "source_system": "Demo data \u2014 simulated civic feeds"
+  },
+  {
+    "ticket_id": "TKT-1023",
+    "created_at": "2026-09-24 13:50:48",
+    "zone_code": "Zone-B",
+    "complaint_type": "waterlogging",
+    "description": "Vehicles stranded due to street flooding",
+    "source_system": "Demo data \u2014 simulated civic feeds"
+  },
+  {
+    "ticket_id": "TKT-1020",
+    "created_at": "2026-09-24 13:51:05",
+    "zone_code": "Zone-B",
+    "complaint_type": "traffic_signal_out",
+    "description": "Water ingress caused signal outage",
+    "source_system": "Demo data \u2014 simulated civic feeds"
+  },
+  {
+    "ticket_id": "TKT-1029",
+    "created_at": "2026-09-24 13:53:05",
+    "zone_code": "Zone-B",
+    "complaint_type": "waterlogging",
+    "description": "Vehicles stranded due to street flooding",
+    "source_system": "Demo data \u2014 simulated civic feeds"
+  },
+  {
+    "ticket_id": "TKT-1025",
+    "created_at": "2026-09-24 13:55:21",
+    "zone_code": "Zone-B",
+    "complaint_type": "traffic_signal_out",
+    "description": "Water ingress caused signal outage",
+    "source_system": "Demo data \u2014 simulated civic feeds"
+  },
+  {
+    "ticket_id": "TKT-1005",
+    "created_at": "2026-09-24 13:56:22",
+    "zone_code": "Zone-C",
+    "complaint_type": "streetlight_fault",
+    "description": "Streetlight blinking or inactive",
+    "source_system": "Demo data \u2014 simulated civic feeds"
+  },
+  {
+    "ticket_id": "TKT-1028",
+    "created_at": "2026-09-24 13:56:32",
+    "zone_code": "Zone-B",
+    "complaint_type": "traffic_signal_out",
+    "description": "Water ingress caused signal outage",
+    "source_system": "Demo data \u2014 simulated civic feeds"
+  },
+  {
+    "ticket_id": "TKT-1027",
+    "created_at": "2026-09-24 13:57:58",
+    "zone_code": "Zone-B",
+    "complaint_type": "waterlogging",
+    "description": "Vehicles stranded due to street flooding",
+    "source_system": "Demo data \u2014 simulated civic feeds"
+  },
+  {
+    "ticket_id": "TKT-1024",
+    "created_at": "2026-09-24 13:59:18",
+    "zone_code": "Zone-B",
+    "complaint_type": "waterlogging",
+    "description": "Vehicles stranded due to street flooding",
+    "source_system": "Demo data \u2014 simulated civic feeds"
+  },
+  {
+    "ticket_id": "TKT-1030",
+    "created_at": "2026-09-24 14:02:26",
+    "zone_code": "Zone-B",
+    "complaint_type": "waterlogging",
+    "description": "Receding slowly, drainage still partially blocked",
+    "source_system": "Demo data \u2014 simulated civic feeds"
+  },
+  {
+    "ticket_id": "TKT-1006",
+    "created_at": "2026-09-24 14:04:07",
+    "zone_code": "Zone-E",
+    "complaint_type": "pothole",
+    "description": "Pothole reported on secondary road",
+    "source_system": "Demo data \u2014 simulated civic feeds"
+  },
+  {
+    "ticket_id": "TKT-1034",
+    "created_at": "2026-09-24 14:04:38",
+    "zone_code": "Zone-B",
+    "complaint_type": "waterlogging",
+    "description": "Receding slowly, drainage still partially blocked",
+    "source_system": "Demo data \u2014 simulated civic feeds"
+  },
+  {
+    "ticket_id": "TKT-1032",
+    "created_at": "2026-09-24 14:10:34",
+    "zone_code": "Zone-B",
+    "complaint_type": "waterlogging",
+    "description": "Receding slowly, drainage still partially blocked",
+    "source_system": "Demo data \u2014 simulated civic feeds"
+  },
+  {
+    "ticket_id": "TKT-1031",
+    "created_at": "2026-09-24 14:10:57",
+    "zone_code": "Zone-B",
+    "complaint_type": "waterlogging",
+    "description": "Receding slowly, drainage still partially blocked",
+    "source_system": "Demo data \u2014 simulated civic feeds"
+  },
+  {
+    "ticket_id": "TKT-1033",
+    "created_at": "2026-09-24 14:11:00",
+    "zone_code": "Zone-B",
+    "complaint_type": "waterlogging",
+    "description": "Receding slowly, drainage still partially blocked",
+    "source_system": "Demo data \u2014 simulated civic feeds"
+  },
+  {
+    "ticket_id": "TKT-1035",
+    "created_at": "2026-09-24 14:15:06",
+    "zone_code": "Zone-B",
+    "complaint_type": "waterlogging",
+    "description": "Pavement standing water clearing",
+    "source_system": "Demo data \u2014 simulated civic feeds"
+  },
+  {
+    "ticket_id": "TKT-1036",
+    "created_at": "2026-09-24 14:19:40",
+    "zone_code": "Zone-B",
+    "complaint_type": "waterlogging",
+    "description": "Pavement standing water clearing",
+    "source_system": "Demo data \u2014 simulated civic feeds"
+  },
+  {
+    "ticket_id": "TKT-1007",
+    "created_at": "2026-09-24 14:36:02",
+    "zone_code": "Zone-A",
+    "complaint_type": "garbage_overflow",
+    "description": "Public bin needs clearing",
+    "source_system": "Demo data \u2014 simulated civic feeds"
+  },
+  {
+    "ticket_id": "TKT-1008",
+    "created_at": "2026-09-24 14:52:12",
+    "zone_code": "Zone-F",
+    "complaint_type": "streetlight_fault",
+    "description": "Streetlight blinking or inactive",
+    "source_system": "Demo data \u2014 simulated civic feeds"
+  }
+]

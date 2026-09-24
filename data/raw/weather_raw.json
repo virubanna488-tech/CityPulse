@@ -1,0 +1,1352 @@
+[
+  {
+    "station_id": "WX-Zone-A",
+    "recorded_at": "2026-09-24 13:00:00",
+    "zone_id": "Zone-A",
+    "rainfall_mm_hr": 1.0,
+    "temperature_c": 28.1,
+    "wind_kmh": 9.9,
+    "data_source": "Demo data \u2014 simulated civic feeds"
+  },
+  {
+    "station_id": "WX-Zone-B",
+    "recorded_at": "2026-09-24 13:00:00",
+    "zone_id": "Zone-B",
+    "rainfall_mm_hr": 0.3,
+    "temperature_c": 30.2,
+    "wind_kmh": 12.7,
+    "data_source": "Demo data \u2014 simulated civic feeds"
+  },
+  {
+    "station_id": "WX-Zone-C",
+    "recorded_at": "2026-09-24 13:00:00",
+    "zone_id": "Zone-C",
+    "rainfall_mm_hr": 1.3,
+    "temperature_c": 28.3,
+    "wind_kmh": 11.0,
+    "data_source": "Demo data \u2014 simulated civic feeds"
+  },
+  {
+    "station_id": "WX-Zone-D",
+    "recorded_at": "2026-09-24 13:00:00",
+    "zone_id": "Zone-D",
+    "rainfall_mm_hr": 0.0,
+    "temperature_c": 28.7,
+    "wind_kmh": 11.5,
+    "data_source": "Demo data \u2014 simulated civic feeds"
+  },
+  {
+    "station_id": "WX-Zone-E",
+    "recorded_at": "2026-09-24 13:00:00",
+    "zone_id": "Zone-E",
+    "rainfall_mm_hr": 0.0,
+    "temperature_c": 28.6,
+    "wind_kmh": 12.5,
+    "data_source": "Demo data \u2014 simulated civic feeds"
+  },
+  {
+    "station_id": "WX-Zone-F",
+    "recorded_at": "2026-09-24 13:00:00",
+    "zone_id": "Zone-F",
+    "rainfall_mm_hr": 0.8,
+    "temperature_c": 28.7,
+    "wind_kmh": 12.1,
+    "data_source": "Demo data \u2014 simulated civic feeds"
+  },
+  {
+    "station_id": "WX-Zone-A",
+    "recorded_at": "2026-09-24 13:05:00",
+    "zone_id": "Zone-A",
+    "rainfall_mm_hr": 1.2,
+    "temperature_c": 28.0,
+    "wind_kmh": 13.6,
+    "data_source": "Demo data \u2014 simulated civic feeds"
+  },
+  {
+    "station_id": "WX-Zone-B",
+    "recorded_at": "2026-09-24 13:05:00",
+    "zone_id": "Zone-B",
+    "rainfall_mm_hr": 1.0,
+    "temperature_c": 29.0,
+    "wind_kmh": 9.1,
+    "data_source": "Demo data \u2014 simulated civic feeds"
+  },
+  {
+    "station_id": "WX-Zone-C",
+    "recorded_at": "2026-09-24 13:05:00",
+    "zone_id": "Zone-C",
+    "rainfall_mm_hr": 1.4,
+    "temperature_c": 29.0,
+    "wind_kmh": 8.6,
+    "data_source": "Demo data \u2014 simulated civic feeds"
+  },
+  {
+    "station_id": "WX-Zone-D",
+    "recorded_at": "2026-09-24 13:05:00",
+    "zone_id": "Zone-D",
+    "rainfall_mm_hr": 0.1,
+    "temperature_c": 30.5,
+    "wind_kmh": 12.2,
+    "data_source": "Demo data \u2014 simulated civic feeds"
+  },
+  {
+    "station_id": "WX-Zone-E",
+    "recorded_at": "2026-09-24 13:05:00",
+    "zone_id": "Zone-E",
+    "rainfall_mm_hr": 1.2,
+    "temperature_c": 30.2,
+    "wind_kmh": 11.8,
+    "data_source": "Demo data \u2014 simulated civic feeds"
+  },
+  {
+    "station_id": "WX-Zone-F",
+    "recorded_at": "2026-09-24 13:05:00",
+    "zone_id": "Zone-F",
+    "rainfall_mm_hr": 1.5,
+    "temperature_c": 29.1,
+    "wind_kmh": 11.9,
+    "data_source": "Demo data \u2014 simulated civic feeds"
+  },
+  {
+    "station_id": "WX-Zone-A",
+    "recorded_at": "2026-09-24 13:10:00",
+    "zone_id": "Zone-A",
+    "rainfall_mm_hr": 1.2,
+    "temperature_c": 29.9,
+    "wind_kmh": 14.0,
+    "data_source": "Demo data \u2014 simulated civic feeds"
+  },
+  {
+    "station_id": "WX-Zone-B",
+    "recorded_at": "2026-09-24 13:10:00",
+    "zone_id": "Zone-B",
+    "rainfall_mm_hr": 0.9,
+    "temperature_c": 30.1,
+    "wind_kmh": 8.3,
+    "data_source": "Demo data \u2014 simulated civic feeds"
+  },
+  {
+    "station_id": "WX-Zone-C",
+    "recorded_at": "2026-09-24 13:10:00",
+    "zone_id": "Zone-C",
+    "rainfall_mm_hr": 0.3,
+    "temperature_c": 28.9,
+    "wind_kmh": 8.6,
+    "data_source": "Demo data \u2014 simulated civic feeds"
+  },
+  {
+    "station_id": "WX-Zone-D",
+    "recorded_at": "2026-09-24 13:10:00",
+    "zone_id": "Zone-D",
+    "rainfall_mm_hr": 0.3,
+    "temperature_c": 28.3,
+    "wind_kmh": 9.9,
+    "data_source": "Demo data \u2014 simulated civic feeds"
+  },
+  {
+    "station_id": "WX-Zone-E",
+    "recorded_at": "2026-09-24 13:10:00",
+    "zone_id": "Zone-E",
+    "rainfall_mm_hr": 1.0,
+    "temperature_c": 29.1,
+    "wind_kmh": 10.6,
+    "data_source": "Demo data \u2014 simulated civic feeds"
+  },
+  {
+    "station_id": "WX-Zone-F",
+    "recorded_at": "2026-09-24 13:10:00",
+    "zone_id": "Zone-F",
+    "rainfall_mm_hr": 0.3,
+    "temperature_c": 28.8,
+    "wind_kmh": 14.6,
+    "data_source": "Demo data \u2014 simulated civic feeds"
+  },
+  {
+    "station_id": "WX-Zone-A",
+    "recorded_at": "2026-09-24 13:15:00",
+    "zone_id": "Zone-A",
+    "rainfall_mm_hr": 1.0,
+    "temperature_c": 29.8,
+    "wind_kmh": 9.2,
+    "data_source": "Demo data \u2014 simulated civic feeds"
+  },
+  {
+    "station_id": "WX-Zone-B",
+    "recorded_at": "2026-09-24 13:15:00",
+    "zone_id": "Zone-B",
+    "rainfall_mm_hr": 1.1,
+    "temperature_c": 28.5,
+    "wind_kmh": 10.7,
+    "data_source": "Demo data \u2014 simulated civic feeds"
+  },
+  {
+    "station_id": "WX-Zone-C",
+    "recorded_at": "2026-09-24 13:15:00",
+    "zone_id": "Zone-C",
+    "rainfall_mm_hr": 1.5,
+    "temperature_c": 29.9,
+    "wind_kmh": 11.9,
+    "data_source": "Demo data \u2014 simulated civic feeds"
+  },
+  {
+    "station_id": "WX-Zone-D",
+    "recorded_at": "2026-09-24 13:15:00",
+    "zone_id": "Zone-D",
+    "rainfall_mm_hr": 1.0,
+    "temperature_c": 30.5,
+    "wind_kmh": 13.4,
+    "data_source": "Demo data \u2014 simulated civic feeds"
+  },
+  {
+    "station_id": "WX-Zone-E",
+    "recorded_at": "2026-09-24 13:15:00",
+    "zone_id": "Zone-E",
+    "rainfall_mm_hr": 0.3,
+    "temperature_c": 28.1,
+    "wind_kmh": 10.2,
+    "data_source": "Demo data \u2014 simulated civic feeds"
+  },
+  {
+    "station_id": "WX-Zone-F",
+    "recorded_at": "2026-09-24 13:15:00",
+    "zone_id": "Zone-F",
+    "rainfall_mm_hr": 0.4,
+    "temperature_c": 28.6,
+    "wind_kmh": 14.6,
+    "data_source": "Demo data \u2014 simulated civic feeds"
+  },
+  {
+    "station_id": "WX-Zone-A",
+    "recorded_at": "2026-09-24 13:20:00",
+    "zone_id": "Zone-A",
+    "rainfall_mm_hr": 1.3,
+    "temperature_c": 28.9,
+    "wind_kmh": 12.6,
+    "data_source": "Demo data \u2014 simulated civic feeds"
+  },
+  {
+    "station_id": "WX-Zone-B",
+    "recorded_at": "2026-09-24 13:20:00",
+    "zone_id": "Zone-B",
+    "rainfall_mm_hr": 0.6,
+    "temperature_c": 30.7,
+    "wind_kmh": 11.2,
+    "data_source": "Demo data \u2014 simulated civic feeds"
+  },
+  {
+    "station_id": "WX-Zone-C",
+    "recorded_at": "2026-09-24 13:20:00",
+    "zone_id": "Zone-C",
+    "rainfall_mm_hr": 0.4,
+    "temperature_c": 28.7,
+    "wind_kmh": 11.9,
+    "data_source": "Demo data \u2014 simulated civic feeds"
+  },
+  {
+    "station_id": "WX-Zone-D",
+    "recorded_at": "2026-09-24 13:20:00",
+    "zone_id": "Zone-D",
+    "rainfall_mm_hr": 0.4,
+    "temperature_c": 29.8,
+    "wind_kmh": 14.3,
+    "data_source": "Demo data \u2014 simulated civic feeds"
+  },
+  {
+    "station_id": "WX-Zone-E",
+    "recorded_at": "2026-09-24 13:20:00",
+    "zone_id": "Zone-E",
+    "rainfall_mm_hr": 0.6,
+    "temperature_c": 28.7,
+    "wind_kmh": 15.0,
+    "data_source": "Demo data \u2014 simulated civic feeds"
+  },
+  {
+    "station_id": "WX-Zone-F",
+    "recorded_at": "2026-09-24 13:20:00",
+    "zone_id": "Zone-F",
+    "rainfall_mm_hr": 0.8,
+    "temperature_c": 28.3,
+    "wind_kmh": 8.3,
+    "data_source": "Demo data \u2014 simulated civic feeds"
+  },
+  {
+    "station_id": "WX-Zone-A",
+    "recorded_at": "2026-09-24 13:25:00",
+    "zone_id": "Zone-A",
+    "rainfall_mm_hr": 0.2,
+    "temperature_c": 29.9,
+    "wind_kmh": 13.5,
+    "data_source": "Demo data \u2014 simulated civic feeds"
+  },
+  {
+    "station_id": "WX-Zone-B",
+    "recorded_at": "2026-09-24 13:25:00",
+    "zone_id": "Zone-B",
+    "rainfall_mm_hr": 18.5,
+    "temperature_c": 28.2,
+    "wind_kmh": 10.7,
+    "data_source": "Demo data \u2014 simulated civic feeds"
+  },
+  {
+    "station_id": "WX-Zone-C",
+    "recorded_at": "2026-09-24 13:25:00",
+    "zone_id": "Zone-C",
+    "rainfall_mm_hr": 1.5,
+    "temperature_c": 29.6,
+    "wind_kmh": 14.8,
+    "data_source": "Demo data \u2014 simulated civic feeds"
+  },
+  {
+    "station_id": "WX-Zone-D",
+    "recorded_at": "2026-09-24 13:25:00",
+    "zone_id": "Zone-D",
+    "rainfall_mm_hr": 1.3,
+    "temperature_c": 28.0,
+    "wind_kmh": 13.0,
+    "data_source": "Demo data \u2014 simulated civic feeds"
+  },
+  {
+    "station_id": "WX-Zone-E",
+    "recorded_at": "2026-09-24 13:25:00",
+    "zone_id": "Zone-E",
+    "rainfall_mm_hr": 1.0,
+    "temperature_c": 29.6,
+    "wind_kmh": 9.9,
+    "data_source": "Demo data \u2014 simulated civic feeds"
+  },
+  {
+    "station_id": "WX-Zone-F",
+    "recorded_at": "2026-09-24 13:25:00",
+    "zone_id": "Zone-F",
+    "rainfall_mm_hr": 1.0,
+    "temperature_c": 28.3,
+    "wind_kmh": 11.0,
+    "data_source": "Demo data \u2014 simulated civic feeds"
+  },
+  {
+    "station_id": "WX-Zone-A",
+    "recorded_at": "2026-09-24 13:30:00",
+    "zone_id": "Zone-A",
+    "rainfall_mm_hr": 0.7,
+    "temperature_c": 30.9,
+    "wind_kmh": 14.1,
+    "data_source": "Demo data \u2014 simulated civic feeds"
+  },
+  {
+    "station_id": "WX-Zone-B",
+    "recorded_at": "2026-09-24 13:30:00",
+    "zone_id": "Zone-B",
+    "rainfall_mm_hr": 70.5,
+    "temperature_c": 24.5,
+    "wind_kmh": 46.3,
+    "data_source": "Demo data \u2014 simulated civic feeds"
+  },
+  {
+    "station_id": "WX-Zone-C",
+    "recorded_at": "2026-09-24 13:30:00",
+    "zone_id": "Zone-C",
+    "rainfall_mm_hr": 0.4,
+    "temperature_c": 29.9,
+    "wind_kmh": 12.3,
+    "data_source": "Demo data \u2014 simulated civic feeds"
+  },
+  {
+    "station_id": "WX-Zone-D",
+    "recorded_at": "2026-09-24 13:30:00",
+    "zone_id": "Zone-D",
+    "rainfall_mm_hr": 0.2,
+    "temperature_c": 30.3,
+    "wind_kmh": 11.8,
+    "data_source": "Demo data \u2014 simulated civic feeds"
+  },
+  {
+    "station_id": "WX-Zone-E",
+    "recorded_at": "2026-09-24 13:30:00",
+    "zone_id": "Zone-E",
+    "rainfall_mm_hr": 1.2,
+    "temperature_c": 29.6,
+    "wind_kmh": 8.0,
+    "data_source": "Demo data \u2014 simulated civic feeds"
+  },
+  {
+    "station_id": "WX-Zone-F",
+    "recorded_at": "2026-09-24 13:30:00",
+    "zone_id": "Zone-F",
+    "rainfall_mm_hr": 0.5,
+    "temperature_c": 28.1,
+    "wind_kmh": 14.5,
+    "data_source": "Demo data \u2014 simulated civic feeds"
+  },
+  {
+    "station_id": "WX-Zone-A",
+    "recorded_at": "2026-09-24 13:35:00",
+    "zone_id": "Zone-A",
+    "rainfall_mm_hr": 1.3,
+    "temperature_c": 30.5,
+    "wind_kmh": 10.2,
+    "data_source": "Demo data \u2014 simulated civic feeds"
+  },
+  {
+    "station_id": "WX-Zone-B",
+    "recorded_at": "2026-09-24 13:35:00",
+    "zone_id": "Zone-B",
+    "rainfall_mm_hr": 56.5,
+    "temperature_c": 24.5,
+    "wind_kmh": 41.3,
+    "data_source": "Demo data \u2014 simulated civic feeds"
+  },
+  {
+    "station_id": "WX-Zone-C",
+    "recorded_at": "2026-09-24 13:35:00",
+    "zone_id": "Zone-C",
+    "rainfall_mm_hr": 0.1,
+    "temperature_c": 30.3,
+    "wind_kmh": 13.4,
+    "data_source": "Demo data \u2014 simulated civic feeds"
+  },
+  {
+    "station_id": "WX-Zone-D",
+    "recorded_at": "2026-09-24 13:35:00",
+    "zone_id": "Zone-D",
+    "rainfall_mm_hr": 0.2,
+    "temperature_c": 29.4,
+    "wind_kmh": 11.8,
+    "data_source": "Demo data \u2014 simulated civic feeds"
+  },
+  {
+    "station_id": "WX-Zone-E",
+    "recorded_at": "2026-09-24 13:35:00",
+    "zone_id": "Zone-E",
+    "rainfall_mm_hr": 0.4,
+    "temperature_c": 30.6,
+    "wind_kmh": 11.0,
+    "data_source": "Demo data \u2014 simulated civic feeds"
+  },
+  {
+    "station_id": "WX-Zone-F",
+    "recorded_at": "2026-09-24 13:35:00",
+    "zone_id": "Zone-F",
+    "rainfall_mm_hr": 0.3,
+    "temperature_c": 29.6,
+    "wind_kmh": 13.1,
+    "data_source": "Demo data \u2014 simulated civic feeds"
+  },
+  {
+    "station_id": "WX-Zone-A",
+    "recorded_at": "2026-09-24 13:40:00",
+    "zone_id": "Zone-A",
+    "rainfall_mm_hr": 0.3,
+    "temperature_c": 28.9,
+    "wind_kmh": 15.0,
+    "data_source": "Demo data \u2014 simulated civic feeds"
+  },
+  {
+    "station_id": "WX-Zone-B",
+    "recorded_at": "2026-09-24 13:40:00",
+    "zone_id": "Zone-B",
+    "rainfall_mm_hr": 57.1,
+    "temperature_c": 24.5,
+    "wind_kmh": 37.9,
+    "data_source": "Demo data \u2014 simulated civic feeds"
+  },
+  {
+    "station_id": "WX-Zone-C",
+    "recorded_at": "2026-09-24 13:40:00",
+    "zone_id": "Zone-C",
+    "rainfall_mm_hr": 0.5,
+    "temperature_c": 29.8,
+    "wind_kmh": 9.6,
+    "data_source": "Demo data \u2014 simulated civic feeds"
+  },
+  {
+    "station_id": "WX-Zone-D",
+    "recorded_at": "2026-09-24 13:40:00",
+    "zone_id": "Zone-D",
+    "rainfall_mm_hr": 0.3,
+    "temperature_c": 28.2,
+    "wind_kmh": 12.4,
+    "data_source": "Demo data \u2014 simulated civic feeds"
+  },
+  {
+    "station_id": "WX-Zone-E",
+    "recorded_at": "2026-09-24 13:40:00",
+    "zone_id": "Zone-E",
+    "rainfall_mm_hr": 0.3,
+    "temperature_c": 30.7,
+    "wind_kmh": 14.0,
+    "data_source": "Demo data \u2014 simulated civic feeds"
+  },
+  {
+    "station_id": "WX-Zone-F",
+    "recorded_at": "2026-09-24 13:40:00",
+    "zone_id": "Zone-F",
+    "rainfall_mm_hr": 0.1,
+    "temperature_c": 28.7,
+    "wind_kmh": 12.7,
+    "data_source": "Demo data \u2014 simulated civic feeds"
+  },
+  {
+    "station_id": "WX-Zone-A",
+    "recorded_at": "2026-09-24 13:45:00",
+    "zone_id": "Zone-A",
+    "rainfall_mm_hr": 0.3,
+    "temperature_c": 28.4,
+    "wind_kmh": 14.5,
+    "data_source": "Demo data \u2014 simulated civic feeds"
+  },
+  {
+    "station_id": "WX-Zone-B",
+    "recorded_at": "2026-09-24 13:45:00",
+    "zone_id": "Zone-B",
+    "rainfall_mm_hr": 68.7,
+    "temperature_c": 24.5,
+    "wind_kmh": 37.5,
+    "data_source": "Demo data \u2014 simulated civic feeds"
+  },
+  {
+    "station_id": "WX-Zone-C",
+    "recorded_at": "2026-09-24 13:45:00",
+    "zone_id": "Zone-C",
+    "rainfall_mm_hr": 0.1,
+    "temperature_c": 29.3,
+    "wind_kmh": 11.0,
+    "data_source": "Demo data \u2014 simulated civic feeds"
+  },
+  {
+    "station_id": "WX-Zone-D",
+    "recorded_at": "2026-09-24 13:45:00",
+    "zone_id": "Zone-D",
+    "rainfall_mm_hr": 0.7,
+    "temperature_c": 30.2,
+    "wind_kmh": 12.7,
+    "data_source": "Demo data \u2014 simulated civic feeds"
+  },
+  {
+    "station_id": "WX-Zone-E",
+    "recorded_at": "2026-09-24 13:45:00",
+    "zone_id": "Zone-E",
+    "rainfall_mm_hr": 1.5,
+    "temperature_c": 28.3,
+    "wind_kmh": 10.8,
+    "data_source": "Demo data \u2014 simulated civic feeds"
+  },
+  {
+    "station_id": "WX-Zone-F",
+    "recorded_at": "2026-09-24 13:45:00",
+    "zone_id": "Zone-F",
+    "rainfall_mm_hr": 0.5,
+    "temperature_c": 30.6,
+    "wind_kmh": 9.7,
+    "data_source": "Demo data \u2014 simulated civic feeds"
+  },
+  {
+    "station_id": "WX-Zone-A",
+    "recorded_at": "2026-09-24 13:50:00",
+    "zone_id": "Zone-A",
+    "rainfall_mm_hr": 0.3,
+    "temperature_c": 29.3,
+    "wind_kmh": 11.0,
+    "data_source": "Demo data \u2014 simulated civic feeds"
+  },
+  {
+    "station_id": "WX-Zone-B",
+    "recorded_at": "2026-09-24 13:50:00",
+    "zone_id": "Zone-B",
+    "rainfall_mm_hr": 62.5,
+    "temperature_c": 24.5,
+    "wind_kmh": 46.2,
+    "data_source": "Demo data \u2014 simulated civic feeds"
+  },
+  {
+    "station_id": "WX-Zone-C",
+    "recorded_at": "2026-09-24 13:50:00",
+    "zone_id": "Zone-C",
+    "rainfall_mm_hr": 0.8,
+    "temperature_c": 28.2,
+    "wind_kmh": 15.0,
+    "data_source": "Demo data \u2014 simulated civic feeds"
+  },
+  {
+    "station_id": "WX-Zone-D",
+    "recorded_at": "2026-09-24 13:50:00",
+    "zone_id": "Zone-D",
+    "rainfall_mm_hr": 1.3,
+    "temperature_c": 30.9,
+    "wind_kmh": 14.5,
+    "data_source": "Demo data \u2014 simulated civic feeds"
+  },
+  {
+    "station_id": "WX-Zone-E",
+    "recorded_at": "2026-09-24 13:50:00",
+    "zone_id": "Zone-E",
+    "rainfall_mm_hr": 1.3,
+    "temperature_c": 28.5,
+    "wind_kmh": 11.4,
+    "data_source": "Demo data \u2014 simulated civic feeds"
+  },
+  {
+    "station_id": "WX-Zone-F",
+    "recorded_at": "2026-09-24 13:50:00",
+    "zone_id": "Zone-F",
+    "rainfall_mm_hr": 0.3,
+    "temperature_c": 29.2,
+    "wind_kmh": 8.4,
+    "data_source": "Demo data \u2014 simulated civic feeds"
+  },
+  {
+    "station_id": "WX-Zone-A",
+    "recorded_at": "2026-09-24 13:55:00",
+    "zone_id": "Zone-A",
+    "rainfall_mm_hr": 0.6,
+    "temperature_c": 31.0,
+    "wind_kmh": 9.9,
+    "data_source": "Demo data \u2014 simulated civic feeds"
+  },
+  {
+    "station_id": "WX-Zone-B",
+    "recorded_at": "2026-09-24 13:55:00",
+    "zone_id": "Zone-B",
+    "rainfall_mm_hr": 71.3,
+    "temperature_c": 24.5,
+    "wind_kmh": 47.9,
+    "data_source": "Demo data \u2014 simulated civic feeds"
+  },
+  {
+    "station_id": "WX-Zone-C",
+    "recorded_at": "2026-09-24 13:55:00",
+    "zone_id": "Zone-C",
+    "rainfall_mm_hr": 0.8,
+    "temperature_c": 30.2,
+    "wind_kmh": 9.1,
+    "data_source": "Demo data \u2014 simulated civic feeds"
+  },
+  {
+    "station_id": "WX-Zone-D",
+    "recorded_at": "2026-09-24 13:55:00",
+    "zone_id": "Zone-D",
+    "rainfall_mm_hr": 0.4,
+    "temperature_c": 30.9,
+    "wind_kmh": 12.1,
+    "data_source": "Demo data \u2014 simulated civic feeds"
+  },
+  {
+    "station_id": "WX-Zone-E",
+    "recorded_at": "2026-09-24 13:55:00",
+    "zone_id": "Zone-E",
+    "rainfall_mm_hr": 0.8,
+    "temperature_c": 30.2,
+    "wind_kmh": 8.4,
+    "data_source": "Demo data \u2014 simulated civic feeds"
+  },
+  {
+    "station_id": "WX-Zone-F",
+    "recorded_at": "2026-09-24 13:55:00",
+    "zone_id": "Zone-F",
+    "rainfall_mm_hr": 0.9,
+    "temperature_c": 29.5,
+    "wind_kmh": 14.0,
+    "data_source": "Demo data \u2014 simulated civic feeds"
+  },
+  {
+    "station_id": "WX-Zone-A",
+    "recorded_at": "2026-09-24 14:00:00",
+    "zone_id": "Zone-A",
+    "rainfall_mm_hr": 0.2,
+    "temperature_c": 30.9,
+    "wind_kmh": 8.6,
+    "data_source": "Demo data \u2014 simulated civic feeds"
+  },
+  {
+    "station_id": "WX-Zone-B",
+    "recorded_at": "2026-09-24 14:00:00",
+    "zone_id": "Zone-B",
+    "rainfall_mm_hr": 59.0,
+    "temperature_c": 24.5,
+    "wind_kmh": 36.6,
+    "data_source": "Demo data \u2014 simulated civic feeds"
+  },
+  {
+    "station_id": "WX-Zone-C",
+    "recorded_at": "2026-09-24 14:00:00",
+    "zone_id": "Zone-C",
+    "rainfall_mm_hr": 1.3,
+    "temperature_c": 28.7,
+    "wind_kmh": 12.2,
+    "data_source": "Demo data \u2014 simulated civic feeds"
+  },
+  {
+    "station_id": "WX-Zone-D",
+    "recorded_at": "2026-09-24 14:00:00",
+    "zone_id": "Zone-D",
+    "rainfall_mm_hr": 0.9,
+    "temperature_c": 29.3,
+    "wind_kmh": 12.1,
+    "data_source": "Demo data \u2014 simulated civic feeds"
+  },
+  {
+    "station_id": "WX-Zone-E",
+    "recorded_at": "2026-09-24 14:00:00",
+    "zone_id": "Zone-E",
+    "rainfall_mm_hr": 0.8,
+    "temperature_c": 30.8,
+    "wind_kmh": 9.4,
+    "data_source": "Demo data \u2014 simulated civic feeds"
+  },
+  {
+    "station_id": "WX-Zone-F",
+    "recorded_at": "2026-09-24 14:00:00",
+    "zone_id": "Zone-F",
+    "rainfall_mm_hr": 1.1,
+    "temperature_c": 28.7,
+    "wind_kmh": 10.8,
+    "data_source": "Demo data \u2014 simulated civic feeds"
+  },
+  {
+    "station_id": "WX-Zone-A",
+    "recorded_at": "2026-09-24 14:05:00",
+    "zone_id": "Zone-A",
+    "rainfall_mm_hr": 1.0,
+    "temperature_c": 28.9,
+    "wind_kmh": 10.2,
+    "data_source": "Demo data \u2014 simulated civic feeds"
+  },
+  {
+    "station_id": "WX-Zone-B",
+    "recorded_at": "2026-09-24 14:05:00",
+    "zone_id": "Zone-B",
+    "rainfall_mm_hr": 25.0,
+    "temperature_c": 28.2,
+    "wind_kmh": 11.2,
+    "data_source": "Demo data \u2014 simulated civic feeds"
+  },
+  {
+    "station_id": "WX-Zone-C",
+    "recorded_at": "2026-09-24 14:05:00",
+    "zone_id": "Zone-C",
+    "rainfall_mm_hr": 1.5,
+    "temperature_c": 28.2,
+    "wind_kmh": 9.5,
+    "data_source": "Demo data \u2014 simulated civic feeds"
+  },
+  {
+    "station_id": "WX-Zone-D",
+    "recorded_at": "2026-09-24 14:05:00",
+    "zone_id": "Zone-D",
+    "rainfall_mm_hr": 0.4,
+    "temperature_c": 30.8,
+    "wind_kmh": 14.2,
+    "data_source": "Demo data \u2014 simulated civic feeds"
+  },
+  {
+    "station_id": "WX-Zone-E",
+    "recorded_at": "2026-09-24 14:05:00",
+    "zone_id": "Zone-E",
+    "rainfall_mm_hr": 1.3,
+    "temperature_c": 29.1,
+    "wind_kmh": 9.1,
+    "data_source": "Demo data \u2014 simulated civic feeds"
+  },
+  {
+    "station_id": "WX-Zone-F",
+    "recorded_at": "2026-09-24 14:05:00",
+    "zone_id": "Zone-F",
+    "rainfall_mm_hr": 1.3,
+    "temperature_c": 30.1,
+    "wind_kmh": 12.3,
+    "data_source": "Demo data \u2014 simulated civic feeds"
+  },
+  {
+    "station_id": "WX-Zone-A",
+    "recorded_at": "2026-09-24 14:10:00",
+    "zone_id": "Zone-A",
+    "rainfall_mm_hr": 1.5,
+    "temperature_c": 30.0,
+    "wind_kmh": 8.1,
+    "data_source": "Demo data \u2014 simulated civic feeds"
+  },
+  {
+    "station_id": "WX-Zone-B",
+    "recorded_at": "2026-09-24 14:10:00",
+    "zone_id": "Zone-B",
+    "rainfall_mm_hr": 24.4,
+    "temperature_c": 28.9,
+    "wind_kmh": 12.6,
+    "data_source": "Demo data \u2014 simulated civic feeds"
+  },
+  {
+    "station_id": "WX-Zone-C",
+    "recorded_at": "2026-09-24 14:10:00",
+    "zone_id": "Zone-C",
+    "rainfall_mm_hr": 0.2,
+    "temperature_c": 28.3,
+    "wind_kmh": 8.7,
+    "data_source": "Demo data \u2014 simulated civic feeds"
+  },
+  {
+    "station_id": "WX-Zone-D",
+    "recorded_at": "2026-09-24 14:10:00",
+    "zone_id": "Zone-D",
+    "rainfall_mm_hr": 0.8,
+    "temperature_c": 28.8,
+    "wind_kmh": 12.2,
+    "data_source": "Demo data \u2014 simulated civic feeds"
+  },
+  {
+    "station_id": "WX-Zone-E",
+    "recorded_at": "2026-09-24 14:10:00",
+    "zone_id": "Zone-E",
+    "rainfall_mm_hr": 1.1,
+    "temperature_c": 28.6,
+    "wind_kmh": 12.4,
+    "data_source": "Demo data \u2014 simulated civic feeds"
+  },
+  {
+    "station_id": "WX-Zone-F",
+    "recorded_at": "2026-09-24 14:10:00",
+    "zone_id": "Zone-F",
+    "rainfall_mm_hr": 0.4,
+    "temperature_c": 29.5,
+    "wind_kmh": 14.3,
+    "data_source": "Demo data \u2014 simulated civic feeds"
+  },
+  {
+    "station_id": "WX-Zone-A",
+    "recorded_at": "2026-09-24 14:15:00",
+    "zone_id": "Zone-A",
+    "rainfall_mm_hr": 1.3,
+    "temperature_c": 28.3,
+    "wind_kmh": 11.0,
+    "data_source": "Demo data \u2014 simulated civic feeds"
+  },
+  {
+    "station_id": "WX-Zone-B",
+    "recorded_at": "2026-09-24 14:15:00",
+    "zone_id": "Zone-B",
+    "rainfall_mm_hr": 21.4,
+    "temperature_c": 28.0,
+    "wind_kmh": 13.4,
+    "data_source": "Demo data \u2014 simulated civic feeds"
+  },
+  {
+    "station_id": "WX-Zone-C",
+    "recorded_at": "2026-09-24 14:15:00",
+    "zone_id": "Zone-C",
+    "rainfall_mm_hr": 0.4,
+    "temperature_c": 30.2,
+    "wind_kmh": 11.9,
+    "data_source": "Demo data \u2014 simulated civic feeds"
+  },
+  {
+    "station_id": "WX-Zone-D",
+    "recorded_at": "2026-09-24 14:15:00",
+    "zone_id": "Zone-D",
+    "rainfall_mm_hr": 0.6,
+    "temperature_c": 28.0,
+    "wind_kmh": 8.5,
+    "data_source": "Demo data \u2014 simulated civic feeds"
+  },
+  {
+    "station_id": "WX-Zone-E",
+    "recorded_at": "2026-09-24 14:15:00",
+    "zone_id": "Zone-E",
+    "rainfall_mm_hr": 1.3,
+    "temperature_c": 30.7,
+    "wind_kmh": 11.8,
+    "data_source": "Demo data \u2014 simulated civic feeds"
+  },
+  {
+    "station_id": "WX-Zone-F",
+    "recorded_at": "2026-09-24 14:15:00",
+    "zone_id": "Zone-F",
+    "rainfall_mm_hr": 1.3,
+    "temperature_c": 29.7,
+    "wind_kmh": 9.0,
+    "data_source": "Demo data \u2014 simulated civic feeds"
+  },
+  {
+    "station_id": "WX-Zone-A",
+    "recorded_at": "2026-09-24 14:20:00",
+    "zone_id": "Zone-A",
+    "rainfall_mm_hr": 0.2,
+    "temperature_c": 28.9,
+    "wind_kmh": 14.3,
+    "data_source": "Demo data \u2014 simulated civic feeds"
+  },
+  {
+    "station_id": "WX-Zone-B",
+    "recorded_at": "2026-09-24 14:20:00",
+    "zone_id": "Zone-B",
+    "rainfall_mm_hr": 17.1,
+    "temperature_c": 30.6,
+    "wind_kmh": 14.3,
+    "data_source": "Demo data \u2014 simulated civic feeds"
+  },
+  {
+    "station_id": "WX-Zone-C",
+    "recorded_at": "2026-09-24 14:20:00",
+    "zone_id": "Zone-C",
+    "rainfall_mm_hr": 0.4,
+    "temperature_c": 28.3,
+    "wind_kmh": 13.5,
+    "data_source": "Demo data \u2014 simulated civic feeds"
+  },
+  {
+    "station_id": "WX-Zone-D",
+    "recorded_at": "2026-09-24 14:20:00",
+    "zone_id": "Zone-D",
+    "rainfall_mm_hr": 1.3,
+    "temperature_c": 29.2,
+    "wind_kmh": 12.3,
+    "data_source": "Demo data \u2014 simulated civic feeds"
+  },
+  {
+    "station_id": "WX-Zone-E",
+    "recorded_at": "2026-09-24 14:20:00",
+    "zone_id": "Zone-E",
+    "rainfall_mm_hr": 0.2,
+    "temperature_c": 30.8,
+    "wind_kmh": 14.1,
+    "data_source": "Demo data \u2014 simulated civic feeds"
+  },
+  {
+    "station_id": "WX-Zone-F",
+    "recorded_at": "2026-09-24 14:20:00",
+    "zone_id": "Zone-F",
+    "rainfall_mm_hr": 1.5,
+    "temperature_c": 30.4,
+    "wind_kmh": 14.2,
+    "data_source": "Demo data \u2014 simulated civic feeds"
+  },
+  {
+    "station_id": "WX-Zone-A",
+    "recorded_at": "2026-09-24 14:25:00",
+    "zone_id": "Zone-A",
+    "rainfall_mm_hr": 0.0,
+    "temperature_c": 30.2,
+    "wind_kmh": 10.3,
+    "data_source": "Demo data \u2014 simulated civic feeds"
+  },
+  {
+    "station_id": "WX-Zone-B",
+    "recorded_at": "2026-09-24 14:25:00",
+    "zone_id": "Zone-B",
+    "rainfall_mm_hr": 23.1,
+    "temperature_c": 30.4,
+    "wind_kmh": 14.0,
+    "data_source": "Demo data \u2014 simulated civic feeds"
+  },
+  {
+    "station_id": "WX-Zone-C",
+    "recorded_at": "2026-09-24 14:25:00",
+    "zone_id": "Zone-C",
+    "rainfall_mm_hr": 0.4,
+    "temperature_c": 30.4,
+    "wind_kmh": 8.8,
+    "data_source": "Demo data \u2014 simulated civic feeds"
+  },
+  {
+    "station_id": "WX-Zone-D",
+    "recorded_at": "2026-09-24 14:25:00",
+    "zone_id": "Zone-D",
+    "rainfall_mm_hr": 1.3,
+    "temperature_c": 30.6,
+    "wind_kmh": 9.6,
+    "data_source": "Demo data \u2014 simulated civic feeds"
+  },
+  {
+    "station_id": "WX-Zone-E",
+    "recorded_at": "2026-09-24 14:25:00",
+    "zone_id": "Zone-E",
+    "rainfall_mm_hr": 1.2,
+    "temperature_c": 29.4,
+    "wind_kmh": 10.1,
+    "data_source": "Demo data \u2014 simulated civic feeds"
+  },
+  {
+    "station_id": "WX-Zone-F",
+    "recorded_at": "2026-09-24 14:25:00",
+    "zone_id": "Zone-F",
+    "rainfall_mm_hr": 1.2,
+    "temperature_c": 28.7,
+    "wind_kmh": 8.2,
+    "data_source": "Demo data \u2014 simulated civic feeds"
+  },
+  {
+    "station_id": "WX-Zone-A",
+    "recorded_at": "2026-09-24 14:30:00",
+    "zone_id": "Zone-A",
+    "rainfall_mm_hr": 0.3,
+    "temperature_c": 29.0,
+    "wind_kmh": 14.1,
+    "data_source": "Demo data \u2014 simulated civic feeds"
+  },
+  {
+    "station_id": "WX-Zone-B",
+    "recorded_at": "2026-09-24 14:30:00",
+    "zone_id": "Zone-B",
+    "rainfall_mm_hr": 19.0,
+    "temperature_c": 28.8,
+    "wind_kmh": 12.5,
+    "data_source": "Demo data \u2014 simulated civic feeds"
+  },
+  {
+    "station_id": "WX-Zone-C",
+    "recorded_at": "2026-09-24 14:30:00",
+    "zone_id": "Zone-C",
+    "rainfall_mm_hr": 1.5,
+    "temperature_c": 29.6,
+    "wind_kmh": 14.6,
+    "data_source": "Demo data \u2014 simulated civic feeds"
+  },
+  {
+    "station_id": "WX-Zone-D",
+    "recorded_at": "2026-09-24 14:30:00",
+    "zone_id": "Zone-D",
+    "rainfall_mm_hr": 0.2,
+    "temperature_c": 30.9,
+    "wind_kmh": 9.2,
+    "data_source": "Demo data \u2014 simulated civic feeds"
+  },
+  {
+    "station_id": "WX-Zone-E",
+    "recorded_at": "2026-09-24 14:30:00",
+    "zone_id": "Zone-E",
+    "rainfall_mm_hr": 1.4,
+    "temperature_c": 28.8,
+    "wind_kmh": 8.8,
+    "data_source": "Demo data \u2014 simulated civic feeds"
+  },
+  {
+    "station_id": "WX-Zone-F",
+    "recorded_at": "2026-09-24 14:30:00",
+    "zone_id": "Zone-F",
+    "rainfall_mm_hr": 0.7,
+    "temperature_c": 30.2,
+    "wind_kmh": 10.2,
+    "data_source": "Demo data \u2014 simulated civic feeds"
+  },
+  {
+    "station_id": "WX-Zone-A",
+    "recorded_at": "2026-09-24 14:35:00",
+    "zone_id": "Zone-A",
+    "rainfall_mm_hr": 0.9,
+    "temperature_c": 29.5,
+    "wind_kmh": 10.7,
+    "data_source": "Demo data \u2014 simulated civic feeds"
+  },
+  {
+    "station_id": "WX-Zone-B",
+    "recorded_at": "2026-09-24 14:35:00",
+    "zone_id": "Zone-B",
+    "rainfall_mm_hr": 2.0,
+    "temperature_c": 28.8,
+    "wind_kmh": 13.0,
+    "data_source": "Demo data \u2014 simulated civic feeds"
+  },
+  {
+    "station_id": "WX-Zone-C",
+    "recorded_at": "2026-09-24 14:35:00",
+    "zone_id": "Zone-C",
+    "rainfall_mm_hr": 1.4,
+    "temperature_c": 29.6,
+    "wind_kmh": 13.0,
+    "data_source": "Demo data \u2014 simulated civic feeds"
+  },
+  {
+    "station_id": "WX-Zone-D",
+    "recorded_at": "2026-09-24 14:35:00",
+    "zone_id": "Zone-D",
+    "rainfall_mm_hr": 1.1,
+    "temperature_c": 30.0,
+    "wind_kmh": 10.5,
+    "data_source": "Demo data \u2014 simulated civic feeds"
+  },
+  {
+    "station_id": "WX-Zone-E",
+    "recorded_at": "2026-09-24 14:35:00",
+    "zone_id": "Zone-E",
+    "rainfall_mm_hr": 0.1,
+    "temperature_c": 30.0,
+    "wind_kmh": 10.3,
+    "data_source": "Demo data \u2014 simulated civic feeds"
+  },
+  {
+    "station_id": "WX-Zone-F",
+    "recorded_at": "2026-09-24 14:35:00",
+    "zone_id": "Zone-F",
+    "rainfall_mm_hr": 0.5,
+    "temperature_c": 30.5,
+    "wind_kmh": 13.0,
+    "data_source": "Demo data \u2014 simulated civic feeds"
+  },
+  {
+    "station_id": "WX-Zone-A",
+    "recorded_at": "2026-09-24 14:40:00",
+    "zone_id": "Zone-A",
+    "rainfall_mm_hr": 0.5,
+    "temperature_c": 28.9,
+    "wind_kmh": 10.9,
+    "data_source": "Demo data \u2014 simulated civic feeds"
+  },
+  {
+    "station_id": "WX-Zone-B",
+    "recorded_at": "2026-09-24 14:40:00",
+    "zone_id": "Zone-B",
+    "rainfall_mm_hr": 3.7,
+    "temperature_c": 28.9,
+    "wind_kmh": 8.9,
+    "data_source": "Demo data \u2014 simulated civic feeds"
+  },
+  {
+    "station_id": "WX-Zone-C",
+    "recorded_at": "2026-09-24 14:40:00",
+    "zone_id": "Zone-C",
+    "rainfall_mm_hr": 1.4,
+    "temperature_c": 30.0,
+    "wind_kmh": 14.3,
+    "data_source": "Demo data \u2014 simulated civic feeds"
+  },
+  {
+    "station_id": "WX-Zone-D",
+    "recorded_at": "2026-09-24 14:40:00",
+    "zone_id": "Zone-D",
+    "rainfall_mm_hr": 0.9,
+    "temperature_c": 28.9,
+    "wind_kmh": 11.8,
+    "data_source": "Demo data \u2014 simulated civic feeds"
+  },
+  {
+    "station_id": "WX-Zone-E",
+    "recorded_at": "2026-09-24 14:40:00",
+    "zone_id": "Zone-E",
+    "rainfall_mm_hr": 0.0,
+    "temperature_c": 28.9,
+    "wind_kmh": 11.0,
+    "data_source": "Demo data \u2014 simulated civic feeds"
+  },
+  {
+    "station_id": "WX-Zone-F",
+    "recorded_at": "2026-09-24 14:40:00",
+    "zone_id": "Zone-F",
+    "rainfall_mm_hr": 0.9,
+    "temperature_c": 30.0,
+    "wind_kmh": 11.3,
+    "data_source": "Demo data \u2014 simulated civic feeds"
+  },
+  {
+    "station_id": "WX-Zone-A",
+    "recorded_at": "2026-09-24 14:45:00",
+    "zone_id": "Zone-A",
+    "rainfall_mm_hr": 0.7,
+    "temperature_c": 28.6,
+    "wind_kmh": 11.3,
+    "data_source": "Demo data \u2014 simulated civic feeds"
+  },
+  {
+    "station_id": "WX-Zone-B",
+    "recorded_at": "2026-09-24 14:45:00",
+    "zone_id": "Zone-B",
+    "rainfall_mm_hr": 2.3,
+    "temperature_c": 30.4,
+    "wind_kmh": 9.2,
+    "data_source": "Demo data \u2014 simulated civic feeds"
+  },
+  {
+    "station_id": "WX-Zone-C",
+    "recorded_at": "2026-09-24 14:45:00",
+    "zone_id": "Zone-C",
+    "rainfall_mm_hr": 0.8,
+    "temperature_c": 29.9,
+    "wind_kmh": 10.3,
+    "data_source": "Demo data \u2014 simulated civic feeds"
+  },
+  {
+    "station_id": "WX-Zone-D",
+    "recorded_at": "2026-09-24 14:45:00",
+    "zone_id": "Zone-D",
+    "rainfall_mm_hr": 1.2,
+    "temperature_c": 30.3,
+    "wind_kmh": 12.7,
+    "data_source": "Demo data \u2014 simulated civic feeds"
+  },
+  {
+    "station_id": "WX-Zone-E",
+    "recorded_at": "2026-09-24 14:45:00",
+    "zone_id": "Zone-E",
+    "rainfall_mm_hr": 0.3,
+    "temperature_c": 28.6,
+    "wind_kmh": 8.2,
+    "data_source": "Demo data \u2014 simulated civic feeds"
+  },
+  {
+    "station_id": "WX-Zone-F",
+    "recorded_at": "2026-09-24 14:45:00",
+    "zone_id": "Zone-F",
+    "rainfall_mm_hr": 0.4,
+    "temperature_c": 29.4,
+    "wind_kmh": 13.9,
+    "data_source": "Demo data \u2014 simulated civic feeds"
+  },
+  {
+    "station_id": "WX-Zone-A",
+    "recorded_at": "2026-09-24 14:50:00",
+    "zone_id": "Zone-A",
+    "rainfall_mm_hr": 0.1,
+    "temperature_c": 29.2,
+    "wind_kmh": 12.4,
+    "data_source": "Demo data \u2014 simulated civic feeds"
+  },
+  {
+    "station_id": "WX-Zone-B",
+    "recorded_at": "2026-09-24 14:50:00",
+    "zone_id": "Zone-B",
+    "rainfall_mm_hr": 3.0,
+    "temperature_c": 30.1,
+    "wind_kmh": 11.5,
+    "data_source": "Demo data \u2014 simulated civic feeds"
+  },
+  {
+    "station_id": "WX-Zone-C",
+    "recorded_at": "2026-09-24 14:50:00",
+    "zone_id": "Zone-C",
+    "rainfall_mm_hr": 1.0,
+    "temperature_c": 28.0,
+    "wind_kmh": 13.3,
+    "data_source": "Demo data \u2014 simulated civic feeds"
+  },
+  {
+    "station_id": "WX-Zone-D",
+    "recorded_at": "2026-09-24 14:50:00",
+    "zone_id": "Zone-D",
+    "rainfall_mm_hr": 1.2,
+    "temperature_c": 28.3,
+    "wind_kmh": 11.0,
+    "data_source": "Demo data \u2014 simulated civic feeds"
+  },
+  {
+    "station_id": "WX-Zone-E",
+    "recorded_at": "2026-09-24 14:50:00",
+    "zone_id": "Zone-E",
+    "rainfall_mm_hr": 0.3,
+    "temperature_c": 30.9,
+    "wind_kmh": 11.6,
+    "data_source": "Demo data \u2014 simulated civic feeds"
+  },
+  {
+    "station_id": "WX-Zone-F",
+    "recorded_at": "2026-09-24 14:50:00",
+    "zone_id": "Zone-F",
+    "rainfall_mm_hr": 0.1,
+    "temperature_c": 28.7,
+    "wind_kmh": 13.9,
+    "data_source": "Demo data \u2014 simulated civic feeds"
+  },
+  {
+    "station_id": "WX-Zone-A",
+    "recorded_at": "2026-09-24 14:55:00",
+    "zone_id": "Zone-A",
+    "rainfall_mm_hr": 0.7,
+    "temperature_c": 30.4,
+    "wind_kmh": 12.7,
+    "data_source": "Demo data \u2014 simulated civic feeds"
+  },
+  {
+    "station_id": "WX-Zone-B",
+    "recorded_at": "2026-09-24 14:55:00",
+    "zone_id": "Zone-B",
+    "rainfall_mm_hr": 5.6,
+    "temperature_c": 29.8,
+    "wind_kmh": 14.7,
+    "data_source": "Demo data \u2014 simulated civic feeds"
+  },
+  {
+    "station_id": "WX-Zone-C",
+    "recorded_at": "2026-09-24 14:55:00",
+    "zone_id": "Zone-C",
+    "rainfall_mm_hr": 0.9,
+    "temperature_c": 30.2,
+    "wind_kmh": 11.5,
+    "data_source": "Demo data \u2014 simulated civic feeds"
+  },
+  {
+    "station_id": "WX-Zone-D",
+    "recorded_at": "2026-09-24 14:55:00",
+    "zone_id": "Zone-D",
+    "rainfall_mm_hr": 1.2,
+    "temperature_c": 29.6,
+    "wind_kmh": 14.3,
+    "data_source": "Demo data \u2014 simulated civic feeds"
+  },
+  {
+    "station_id": "WX-Zone-E",
+    "recorded_at": "2026-09-24 14:55:00",
+    "zone_id": "Zone-E",
+    "rainfall_mm_hr": 1.1,
+    "temperature_c": 29.4,
+    "wind_kmh": 9.8,
+    "data_source": "Demo data \u2014 simulated civic feeds"
+  },
+  {
+    "station_id": "WX-Zone-F",
+    "recorded_at": "2026-09-24 14:55:00",
+    "zone_id": "Zone-F",
+    "rainfall_mm_hr": 0.4,
+    "temperature_c": 29.9,
+    "wind_kmh": 13.4,
+    "data_source": "Demo data \u2014 simulated civic feeds"
+  },
+  {
+    "station_id": "WX-Zone-A",
+    "recorded_at": "2026-09-24 15:00:00",
+    "zone_id": "Zone-A",
+    "rainfall_mm_hr": 0.8,
+    "temperature_c": 29.9,
+    "wind_kmh": 9.9,
+    "data_source": "Demo data \u2014 simulated civic feeds"
+  },
+  {
+    "station_id": "WX-Zone-B",
+    "recorded_at": "2026-09-24 15:00:00",
+    "zone_id": "Zone-B",
+    "rainfall_mm_hr": 3.3,
+    "temperature_c": 28.9,
+    "wind_kmh": 9.9,
+    "data_source": "Demo data \u2014 simulated civic feeds"
+  },
+  {
+    "station_id": "WX-Zone-C",
+    "recorded_at": "2026-09-24 15:00:00",
+    "zone_id": "Zone-C",
+    "rainfall_mm_hr": 0.8,
+    "temperature_c": 28.4,
+    "wind_kmh": 9.6,
+    "data_source": "Demo data \u2014 simulated civic feeds"
+  },
+  {
+    "station_id": "WX-Zone-D",
+    "recorded_at": "2026-09-24 15:00:00",
+    "zone_id": "Zone-D",
+    "rainfall_mm_hr": 1.0,
+    "temperature_c": 30.1,
+    "wind_kmh": 8.4,
+    "data_source": "Demo data \u2014 simulated civic feeds"
+  },
+  {
+    "station_id": "WX-Zone-E",
+    "recorded_at": "2026-09-24 15:00:00",
+    "zone_id": "Zone-E",
+    "rainfall_mm_hr": 0.6,
+    "temperature_c": 29.6,
+    "wind_kmh": 10.9,
+    "data_source": "Demo data \u2014 simulated civic feeds"
+  },
+  {
+    "station_id": "WX-Zone-F",
+    "recorded_at": "2026-09-24 15:00:00",
+    "zone_id": "Zone-F",
+    "rainfall_mm_hr": 0.3,
+    "temperature_c": 29.3,
+    "wind_kmh": 14.3,
+    "data_source": "Demo data \u2014 simulated civic feeds"
+  }
+]
